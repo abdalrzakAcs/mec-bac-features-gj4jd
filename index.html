@@ -1,0 +1,1319 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="ميزات رقمية مقترحة لكتب البكلوريا العلمي الثمانية، مع أمثلة حيّة من الكتب.">
+<meta property="og:title" content="ميزات كتب البكلوريا">
+<meta property="og:description" content="٨٤ ميزة رقمية مقترحة لكتب البكلوريا العلمي، مع أمثلة حيّة تجربها بإيدك.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23FF7802%22%2F%3E%3Cpath%20d%3D%22M14%2018c7-3%2013-2%2018%202%205-4%2011-5%2018-2v28c-7-3-13-2-18%202-5-4-11-5-18-2z%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M32%2020v28%22%20stroke%3D%22%23FF7802%22%20stroke-width%3D%222.5%22%2F%3E%3C%2Fsvg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>ميزات كتب البكلوريا</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Amiri:wght@400;700&family=Amiri+Quran&family=STIX+Two+Text:ital@0;1&display=swap">
+<style>
+/* التخطيط: كتاب مدرسي رقمي — شريط مواد علوي بألوان الكتب، وعمود قراءة واحد فيه بطاقات الميزات، وكل بطاقة بتنتهي بأزرار القرار */
+:root{
+  --bg:#F8F6F3;
+  --surface:#FFFFFF;
+  --ink:#2E2925;
+  --muted:#6E645B;
+  --line:#E6DFD8;
+  --soft:#F2EEE9;
+  --brand:#FF7802;
+  --brand-ink:#B45309;
+  --ok:#15803D; --ok-bg:#EAF6EE;
+  --bad:#B91C1C; --bad-bg:#FBECEC;
+  --later:#A16207; --later-bg:#FBF3E2;
+  --font-ui:"Cairo","Segoe UI",Tahoma,sans-serif;
+  --font-verse:"Amiri","Traditional Arabic","Times New Roman",serif;
+  --font-quran:"Amiri Quran","Amiri","Traditional Arabic",serif;
+  --font-math:"STIX Two Text","Cambria Math","Times New Roman",serif;
+  color-scheme:light;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-ui);font-size:15.5px;line-height:1.85;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+*{box-sizing:border-box}
+.wrap{max-width:880px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-weight:600;text-wrap:balance;margin:0;line-height:1.5}
+p{margin:0}
+button{font-family:inherit;font-size:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+bdi,.ltr{direction:ltr;unicode-bidi:isolate}
+
+/* الرأس */
+header.top{background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{padding-block:28px 22px;display:grid;gap:10px}
+.eyebrow{font-size:13px;color:var(--brand-ink);letter-spacing:.02em}
+header.top h1{font-size:30px}
+header.top .lead{color:var(--muted);max-width:62ch}
+.tally{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.tally span{font-size:13px;padding:2px 12px;border-radius:999px;background:var(--soft);color:var(--muted)}
+.tally .t-yes{background:var(--ok-bg);color:var(--ok)}
+.tally .t-later{background:var(--later-bg);color:var(--later)}
+.tally .t-no{background:var(--bad-bg);color:var(--bad)}
+
+/* شريط المواد */
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:6px;overflow-x:auto;padding-block:10px;scrollbar-width:thin}
+nav.tabs a{flex:none;text-decoration:none;color:var(--ink);font-size:14px;padding:4px 14px;border-radius:999px;border:1px solid var(--line);display:flex;align-items:center;gap:7px;white-space:nowrap}
+nav.tabs a .dot{width:9px;height:9px;border-radius:50%;background:var(--c,var(--brand))}
+nav.tabs a[aria-current="page"]{background:var(--c,var(--brand));border-color:var(--c,var(--brand));color:#fff}
+nav.tabs a[aria-current="page"] .dot{background:#fff}
+
+main .wrap{padding-block:26px 60px;display:grid;gap:22px}
+
+/* نظرة عامة */
+.panel{display:grid;gap:22px}
+.rule{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:grid;gap:10px}
+.rule h2{font-size:19px}
+.rule ul{margin:0;padding-inline-start:20px;display:grid;gap:4px}
+.legend{display:grid;gap:8px}
+.legend .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+.top5{display:grid;gap:10px;margin:0;padding:0;list-style:none;counter-reset:t}
+.top5 li{counter-increment:t;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.top5 li::before{content:counter(t,arabic-indic);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--brand-ink);font-weight:600}
+.top5 li:first-child{border-color:var(--brand)}
+.top5 li:first-child::before{background:var(--brand);color:#fff}
+.top5 b{font-weight:600}
+.top5 p{color:var(--muted);font-size:14.5px}
+.top5 a{color:var(--brand-ink)}
+.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+.book{text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:4px;border-top:4px solid var(--c)}
+.book b{font-weight:600;font-size:16px}
+.book span{font-size:13.5px;color:var(--muted)}
+.sec-title{font-size:20px;display:flex;align-items:baseline;gap:10px}
+.sec-title small{font-size:13.5px;color:var(--muted);font-weight:400}
+
+/* رأس الكتاب */
+.bookhead{background:var(--tint);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:10px;border-inline-start:5px solid var(--c)}
+.bookhead h2{font-size:24px;color:var(--c)}
+.bookhead .exists{font-size:14px;color:var(--muted)}
+.bookhead .exists b{font-weight:600;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips a{font-size:13px;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:2px 11px;display:inline-flex;gap:5px;align-items:center}
+.chips a.d-yes{border-color:var(--ok);color:var(--ok)}
+.chips a.d-later{border-color:var(--later);color:var(--later)}
+.chips a.d-no{border-color:var(--bad);color:var(--bad);text-decoration:line-through}
+
+/* بطاقة الميزة */
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:14px;scroll-margin-top:80px}
+.feat.star{border-color:var(--c);box-shadow:0 1px 0 var(--c)}
+.feat-head{display:grid;gap:8px}
+.feat h3{font-size:19px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{font-size:12.5px;padding:1px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--surface);white-space:nowrap}
+.badge.star{background:var(--c);border-color:var(--c);color:#fff}
+.badge.e1{color:var(--ok);border-color:#BFE3CB}
+.badge.e2{color:var(--later);border-color:#EED9A8}
+.badge.e3{color:var(--bad);border-color:#F1C4C4}
+.badge.dready{background:var(--ok-bg);border-color:transparent;color:var(--ok)}
+.badge.dprep{background:var(--later-bg);border-color:transparent;color:var(--later)}
+.badge.dai{background:#EEF0FB;border-color:transparent;color:#4338CA}
+.badge.done{background:var(--ink);border-color:var(--ink);color:#fff}
+.lbl{font-size:12.5px;color:var(--c);letter-spacing:.02em;margin-bottom:2px}
+.idea{font-size:16px}
+.how ol{margin:0;padding-inline-start:22px;display:grid;gap:3px}
+.how li::marker{color:var(--c)}
+.ex{background:var(--tint);border-radius:10px;padding:14px 16px;display:grid;gap:8px;min-width:0}
+.ex .lbl{color:var(--c)}
+.why{color:var(--muted);font-size:14.5px}
+.why b{color:var(--ink);font-weight:600}
+
+/* القرار */
+.decide{border-top:1px dashed var(--line);padding-top:14px;display:grid;gap:10px}
+.dbtns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.dbtns .q{font-size:14px;color:var(--muted);margin-inline-end:4px}
+.dbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:4px 16px;font-size:14px}
+.dbtn:hover{border-color:var(--muted)}
+.dbtn[aria-pressed="true"].yes{background:var(--ok);border-color:var(--ok);color:#fff}
+.dbtn[aria-pressed="true"].later{background:var(--later);border-color:var(--later);color:#fff}
+.dbtn[aria-pressed="true"].no{background:var(--bad);border-color:var(--bad);color:#fff}
+.note-in{width:100%;font-family:inherit;font-size:14px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--bg);color:var(--ink);resize:vertical;min-height:40px}
+.saved{font-size:12.5px;color:var(--muted)}
+
+/* الرياضيات والرموز */
+.m{font-family:var(--font-math);direction:ltr;unicode-bidi:isolate;white-space:nowrap;font-size:1.06em}
+.m i{font-style:italic}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.25;margin:0 .12em}
+.fr>span:first-child{border-bottom:1px solid currentColor;padding:0 .25em}
+.fr>span:last-child{padding:0 .25em}
+.mline{overflow-x:auto;padding:4px 0}
+.nuc{display:inline-flex;align-items:center;font-family:var(--font-math);font-size:1.15em}
+.az{display:inline-flex;flex-direction:column;align-items:flex-end;font-size:.62em;line-height:1.05;margin-inline-end:1px}
+.az sup,.az sub{vertical-align:baseline;position:static;font-size:1em}
+
+/* الأمثلة الحيّة */
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:12px;min-width:0}
+.demo .live{font-size:12px;color:#fff;background:var(--c);border-radius:999px;padding:0 10px;justify-self:start}
+.demo .qtext{font-size:15px}
+.btn{border:1px solid var(--c);background:var(--surface);color:var(--c);border-radius:10px;padding:5px 14px;font-size:14px}
+.btn.fill{background:var(--c);color:#fff}
+.btn:disabled{opacity:.45;cursor:default}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.steps{margin:0;padding-inline-start:24px;display:grid;gap:10px}
+.steps li{padding:8px 12px;border-radius:10px;background:var(--tint)}
+.steps li::marker{color:var(--c);font-weight:600}
+.steps li.hiddenstep{background:repeating-linear-gradient(-45deg,var(--soft),var(--soft) 6px,var(--surface) 6px,var(--surface) 12px);color:transparent;user-select:none;min-height:42px}
+.steps .self{display:flex;gap:6px;margin-top:6px}
+.steps .self button{font-size:12.5px;border-radius:999px;border:1px solid var(--line);background:var(--surface);padding:0 10px;color:var(--muted)}
+.steps .self button[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:#fff}
+.result{font-size:14.5px;padding:8px 12px;border-radius:10px;background:var(--soft)}
+.result.good{background:var(--ok-bg);color:var(--ok)}
+.result.badr{background:var(--bad-bg);color:var(--bad)}
+
+.sim canvas{width:100%;height:150px;display:block;border-radius:10px;background:var(--bg)}
+.ctrls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.ctrls label{display:grid;gap:2px;font-size:14px}
+.ctrls input{width:100%;accent-color:var(--c)}
+.readout{font-size:16px}
+.readout b{font-weight:600;color:var(--c);font-family:var(--font-math);font-size:1.15em}
+.flash{animation:flash .9s ease}
+@keyframes flash{0%{background:var(--tint)}100%{background:transparent}}
+
+.eqline{font-size:22px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;direction:ltr;justify-content:center;padding:10px 0}
+.slot{min-width:56px;min-height:46px;border:2px dashed var(--c);border-radius:10px;display:inline-grid;place-items:center;color:var(--c)}
+.slot.okk{border-style:solid;border-color:var(--ok);color:var(--ok)}
+.slot.nok{border-style:solid;border-color:var(--bad);color:var(--bad)}
+.opts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.opt{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:4px 12px;display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--ink)}
+.opt:hover{border-color:var(--c)}
+.opt.okk{border-color:var(--ok);background:var(--ok-bg)}
+.opt.nok{border-color:var(--bad);background:var(--bad-bg)}
+.counters{display:grid;gap:4px;font-size:14px}
+.counters .m{font-size:1em}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:2px 12px;font-size:13.5px;color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:#fff}
+
+.pool,.built{display:flex;flex-wrap:wrap;gap:8px;min-height:44px;align-items:center}
+.built{border:1px dashed var(--c);border-radius:10px;padding:8px}
+.built .arrow{color:var(--c)}
+.chipbtn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:4px 12px;font-size:14px;color:var(--ink)}
+.chipbtn.placed{background:var(--tint);border-color:var(--c);color:var(--c);cursor:default}
+.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-5px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+
+.verse{display:grid;gap:12px;font-family:var(--font-verse);font-size:23px;line-height:2.1}
+.bayt{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px}
+.bayt>span{text-align:center}
+.quran{font-family:var(--font-quran);font-size:25px;line-height:2.3;text-align:center}
+.blank{font-family:inherit;font-size:inherit;border:0;border-bottom:2px solid var(--c);background:var(--tint);color:transparent;border-radius:4px 4px 0 0;padding:0 .2em;margin:0 .05em;line-height:1.4}
+.rev{color:var(--c);background:var(--tint);border-radius:4px}
+
+.items{display:grid;gap:8px}
+.item{display:grid;gap:6px;padding:10px 12px;border:1px solid var(--line);border-radius:10px}
+.item .sent{font-size:16px;direction:ltr;text-align:left}
+.item .fb{font-size:14px}
+.item.okk{border-color:#BFE3CB;background:var(--ok-bg)}
+.item.nok{border-color:#F1C4C4;background:var(--bad-bg)}
+
+.copybox{width:100%;min-height:140px;font-family:inherit;font-size:14px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--surface);color:var(--ink)}
+.dgroup{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;gap:8px}
+.dgroup h3{font-size:17px}
+.dgroup ul{margin:0;padding-inline-start:20px;display:grid;gap:3px}
+.dgroup li small{color:var(--muted)}
+.status{font-size:13px;color:var(--muted)}
+
+@media (max-width:560px){
+  header.top h1{font-size:25px}
+  .feat{padding:16px}
+  .bayt{grid-template-columns:1fr;gap:0}
+  .verse{font-size:21px}
+  .eqline{font-size:19px}
+}
+.decide{display:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<div dir="rtl" lang="ar">
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">مكتبة البكلوريا · ماي اكزامس</div>
+    <h1>ميزات كتب البكلوريا</h1>
+    <p class="lead">ميزات رقمية مقترحة للكتب الثمانية على نمط «الرسمات المفرّغة». كل ميزة إلها شرح كيف بتشتغل، ومثال من الكتاب نفسه، وبعض الأمثلة حيّة فيك تجربها هون.</p>
+    <div class="tally" id="tally"></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="المواد"><div class="wrap" id="tabs"></div></nav>
+
+<main><div class="wrap" id="view"></div></main>
+</div>
+
+<script>
+/* ===== البيانات ===== */
+const M = (s)=>`<span class="m">${s}</span>`;
+const FR = (a,b)=>`<span class="fr"><span>${a}</span><span>${b}</span></span>`;
+const NUC = (A,Z,S)=>`<span class="nuc"><span class="az"><sup>${A}</sup><sub>${String(Z).replace('-','−')}</sub></span>${S}</span>`;
+
+const EFF = {1:['e1','جهد صغير'],2:['e2','جهد متوسط'],3:['e3','جهد كبير']};
+const DATA = {ready:['dready','البيانات جاهزة'],prep:['dprep','بدها تجهيز محتوى'],ai:['dai','بدها المدرّس الذكي']};
+
+const SUBJECTS = [
+{id:'exam',name:'للامتحان الأخير',short:'للامتحان',color:'#0F766E',tint:'#ECF6F4',
+ exists:'ميزات هدفها علامة الامتحان مباشرة. مبنية على ٢٩٦ ملف دورات وسلالم وحلول للمواد الثمانية من ٢٠١٨ لـ ٢٠٢٦، وعلى قراءة أوراق امتحان حزيران ٢٠٢٦ الرسمية ورقة ورقة. مجموع الأوراق الثمانية ٢٧٠٠ درجة.',
+ features:[
+ {id:'ex-papermap',star:true,eff:1,data:'ready',t:'وين العلامات: خريطة ورقة الامتحان',
+  idea:'لكل مادة صفحة بتبيّن وين بتروح العلامات بورقة الوزارة: كل قسم وعلامته ونوع أسئلته، والدرس اللي بيجي منه.',
+  how:['بيفتح المادة.','بيشوف الورقة مقسومة حسب العلامات.','كبسة عالقسم بتفتح تدريبه بالتطبيق.','الخريطة بتتحدث كل سنة بعد الامتحان.'],
+  ex:`من أوراق ٢٠٢٦ الرسمية:<br>
+- الرياضيات ٦٠٠ درجة بتلات ساعات ونص: التحليل حوالي ٣٨٪، الهندسة الفراغية ٢٢٪، الاحتمالات والعدّ ١٥٪، العقدية ١٣٪، المتتاليات ١٢٪. وما في اختيار بين الأسئلة.<br>
+- الفيزياء ٤٠٠ بتلات ساعات: المسائل ٢٤٠ درجة (٦٠٪)، واستنتاج طاقة الدارة المهتزة إجباري عليه ٣٠.<br>
+- الكيمياء ٢٠٠ بساعتين: المسائل ١٢٠ (٦٠٪): الغازات، قانون السرعة، الحلمهة، والمعايرة.<br>
+- العلوم ٣٠٠ بساعتين ونص: اختيار من متعدد ١٠٠، علّل ٥٠، مسألة وراثة ٥٠، خريطة مفاهيم ٣٠، ورسمة لتسمية أجزائها.<br>
+- العربي ٤٠٠: التعبير ١٤٠ منها الموضوع الأساسي ١٠٠ بشواهد من الكتاب، والإعراب ٤٠.<br>
+- الإنكليزي ٣٠٠: القواعد واللغة حوالي ٥٣٪، القراءة ٢٦٪، الإنشاء ٥٠، الترجمة ١٤.<br>
+- الفرنسي ٣٠٠ بساعتين: اختيار وصح وخطأ ١٦٠، ترتيب حوار ٤٠، رسالة ٦٠.<br>
+- الديانة ٢٠٠ بساعة ونص: تسميع القرآن والحديث حوالي ٥٥ درجة.`,
+  why:'<b>ليش مهمة:</b> الطالب بيوزّع دراسته حسب العلامات مو حسب عدد الصفحات. مثلاً بالفيزياء والكيمياء المسائل لحالها ٦٠٪ من الورقة.'},
+ {id:'ex-repeat',star:true,eff:3,data:'prep',t:'«وزاري ×٥»: الأسئلة اللي ما بتغيب',
+  idea:'جنب كل سؤال بالكتاب بيطلع كم مرة إجا بالدورات الرسمية ومن أي سنين، والطالب بيقدر يفلتر عالأكتر تكراراً.',
+  how:['منطابق أسئلة الدورات من ٢٠١٨ لـ ٢٠٢٦ مع أسئلة الكتاب.','كل سؤال إجا بالامتحان بياخد شارة «وزاري» مع عدد المرات والسنين.','بأي قسم في زر «رتّب حسب التكرار».','بآخر أسبوع: جولة على الأسئلة اللي إجت ٣ مرات وأكتر بس.'],
+  ex:'من ورقة العلوم ٢٠٢٦: «علّل: لعناصر القوس الانعكاسية النخاعية الكروناكسي نفسه» إجا بقسم «أعطِ تفسيراً علمياً»، وهو موجود حرفياً بتعاليل الكتاب بالتطبيق. هيك سؤال كان بياخد شارة «إجا ٢٠٢٦»، وبعد المطابقة بيبيّن كم مرة إجا قبل.',
+  why:'<b>ليش مهمة:</b> بآخر شهر ما في وقت لكل شي، وهاي بتقول للطالب وين يحط وقته. الدورات والسلالم مجمّعة ومتحقَّق منها، باقي المطابقة.'},
+ {id:'ex-mock',star:true,eff:2,data:'prep',t:'امتحان بنفس شكل الورقة',
+  idea:'امتحان تجريبي من أسئلة الكتاب والدورات، بنفس أقسام ورقة الوزارة وعلاماتها ومدتها بالضبط.',
+  how:['بيختار المادة.','بتطلع ورقة بنفس ترتيب الأقسام وعدد الأسئلة والعلامات.','مؤقّت بمدة الامتحان الحقيقية.','بالآخر بيصحّح بالسلم، وبتطلع علامته من الدرجة الكاملة.'],
+  ex:'ورقة الرياضيات ٢٠٢٦: ٦٠٠ درجة بتلات ساعات ونص. أولاً عشر أسئلة اختيار من متعدد (١٠٠)، ثانياً تلات أسئلة قصيرة كل واحد ٤٠ (١٢٠)، ثالثاً تلات تمارين كل واحد ٦٠ (١٨٠)، رابعاً مسألتين كل وحدة ١٠٠ (٢٠٠). الامتحان التجريبي بيمشي بنفس هالترتيب والعلامات.',
+  why:'<b>ليش مهمة:</b> الطالب بيتعوّد على شكل الورقة ووقتها قبل اليوم الحقيقي، فما بيتفاجأ بالقاعة.'},
+ {id:'ex-recite',star:true,eff:1,data:'ready',t:'التسميع بسلم الوزارة',
+  idea:'الطالب بيكتب الآية أو الحديث من حفظه، والتطبيق بيصحّح متل السلم بالضبط: بيعدّ الغلطات وبينقص عليها.',
+  how:['بيختار الآيات أو الحديث المطلوب حفظه.','بيكتب من حفظه، أو بيكمّل الفراغات.','التطبيق بيلوّن كل غلطة.','بتطلع علامته متل السلم، والغلطات بترجعله بالمراجعة.'],
+  ex:'ورقة الديانة ٢٠٢٦: «أكمل الآيتين ٢٨٤ و٢٨٥ من سورة البقرة» عليه ٣٠ درجة، والسلم بينقص ٣ علامات عن كل غلطة. و«أكمل الحديث (إنما أنا بشر...) واذكر راويه» عليه ٢٥، منها ٥ لاسم الراوي (أم سلمة).',
+  why:'<b>ليش مهمة:</b> التسميع حوالي ٥٥ درجة من ٢٠٠ بالديانة، وهي أضمن علامات بالورقة إذا الحفظ دقيق. ونفس الطريقة بتخدم شواهد التعبير بالعربي.'},
+ {id:'ex-tarshih',star:true,eff:2,data:'prep',t:'تحضير الاختبار الترشيحي للأحرار',
+  idea:'حزمة تحضير للاختبار الترشيحي اللي رجعت الوزارة فرضته عالطلاب الأحرار، بنفس توزيعه الرسمي.',
+  how:['امتحان تجريبي بساعتين من ١٠٠ درجة: رياضيات ٤٠، عربي ٣٠، علم الأحياء ١٥، فيزياء ١٥.','الأسئلة من نفس كتب المكتبة.','هدف النجاح ٤٠٪ ظاهر قدامه، ومعه أضعف مادة عنده.'],
+  ex:'الوزارة رجّعت الاختبار الترشيحي للأحرار لدورة ٢٠٢٧ بعد ما وقّفته دورتين. موعده حسب وكالة سانا ١٩ كانون الأول ٢٠٢٦، وتعميم تاني قال الموعد بيتحدد لاحقاً. المستثنين: المعيدين والراسبين بدورات سابقة، واللي معهم تسلسل دراسي للأول والتاني الثانوي.',
+  why:'<b>ليش مهمة:</b> جمهور كامل بحاجة فورية والموعد قريب، والمحتوى موجود بكتب المكتبة.'},
+ {id:'ex-derive',eff:1,data:'ready',t:'مدرّب الاستنتاجات (فيزياء)',
+  idea:'كل استنتاج بالكتاب سلسلة خطوات ثابتة، والطالب بيتدرّب عليها بالكشف خطوة خطوة وبترتيب الخطوات المخلوطة.',
+  how:['بيختار الاستنتاج.','بيكتب الخطوة الجاية براسه وبيكشف.','وضع اختبار: الخطوات مخلوطة وبيرتّبها.'],
+  ex:'بورقة ٢٠٢٦: «استنتج الطاقة الكلية لدارة مهتزة غير متخامدة» إجباري عليه ٣٠ درجة، وبالأسئلة الاختيارية «برهن أن الحركة توافقية واستنتج دور النواس المرن» و«استنتج معادلة الاستمرارية».',
+  why:'<b>ليش مهمة:</b> الاستنتاج علامة مضمونة لأنه ما بيتغيّر من سنة لسنة. وقسم «اشتقاق القوانين» موجود بالكتاب.'},
+ {id:'ex-problems',eff:2,data:'prep',t:'أنماط المسائل الثابتة',
+  idea:'المسائل بالفيزياء والكيمياء بتجي على أنماط شبه ثابتة، فكل نمط إله بنك مسائل بحل خطوة بخطوة، وبيتدرّب الطالب عليه لحد ما يصير تلقائي.',
+  how:['بيختار النمط.','بيحل مسائله من الأسهل للوزاري.','الحل بينكشف خطوة خطوة.','بتنحفظ نسبته بكل نمط.'],
+  ex:'مسائل الفيزياء ٢٠٢٦: نواس مركّب ٨٥، دارة تيار متناوب مع إنشاء فرينل ٨٠، وشيعة بحقل مغناطيسي ٤٥، وأنبوب صوتي مغلق ٣٠. ومسائل الكيمياء: ضغوط جزئية، قانون السرعة، حلمهة ملح، ومعايرة.',
+  why:'<b>ليش مهمة:</b> المسائل ٦٠٪ من ورقتي الفيزياء والكيمياء، وتقريباً تلت مجموع البكلوريا كله مسائل حسابية.'},
+ {id:'ex-conceptmap',eff:1,data:'ready',t:'خريطة المفاهيم المفرّغة (علوم)',
+  idea:'خرائط المفاهيم الموجودة بالكتاب بتطلع بخانات فاضية، والطالب بيعبّيها متل سؤال الامتحان.',
+  how:['بتطلع الخريطة بخانات فاضية.','بيكتب أو بيختار المفهوم.','بتتصحّح خانة خانة.'],
+  ex:'بورقة العلوم ٢٠٢٦: «لاحظ المخطط المجاور ثم اكتب المفاهيم العلمية المناسبة» على الباحات الترابطية بالدماغ، ست خانات فاضية عليهن ٣٠ درجة.',
+  why:'<b>ليش مهمة:</b> قسم خرائط المفاهيم موجود، وناقصه بس وضع التفريغ.'},
+ {id:'ex-pedigree',eff:2,data:'prep',t:'شجرة النسب التفاعلية (علوم)',
+  idea:'مسألة وراثة على شجرة نسب، والطالب بيكتب النمط الوراثي لكل فرد، والتطبيق بيصحّح فرد فرد.',
+  how:['بتطلع الشجرة.','بيكبس على كل فرد ويكتب نمطه الوراثي.','بيكتب التحليل، وبيطلعله الحل النموذجي.'],
+  ex:'بورقة العلوم ٢٠٢٦: مسألة وراثة زمر الدم على شجرة نسب (أبوين زمرهن B و AB وأولاد زمرهن AB و B و A) عليها ٥٠ درجة.',
+  why:'<b>ليش مهمة:</b> المسألة الوراثية سدس علامة العلوم.'},
+ {id:'ex-transform',eff:1,data:'prep',t:'إعادة صياغة الجمل (إنكليزي)',
+  idea:'جملة وبين قوسين المطلوب، والطالب بيعيد كتابتها، والتطبيق بيصحّح وبيشرح القاعدة.',
+  how:['بتطلع الجملة والمطلوب.','بيكتب.','بيطلعله التصحيح والقاعدة.'],
+  ex:'بورقة الإنكليزي ٢٠٢٦: أربع جمل عليهن ٣٢ درجة: المبني للمجهول، والصيغة السببية، و<bdi>I wish</bdi>، والسؤال المنقول.',
+  why:'<b>ليش مهمة:</b> القواعد واللغة أكتر من نص ورقة الإنكليزي.'},
+ {id:'ex-dialogue',eff:1,data:'prep',t:'رتّب الحوار (فرنسي)',
+  idea:'حوار من ست جمل مخلوطة، والطالب بيرتّبه من ١ لـ ٦.',
+  how:['بتطلع الجمل مخلوطة.','بيرتّبها.','بيطلعله الصح وليش.'],
+  ex:'بورقة الفرنسي ٢٠٢٦: «رتّب هذا الحوار من ١ إلى ٦» عن الروبوتات، عليه ٤٠ درجة.',
+  why:'<b>ليش مهمة:</b> سؤال سهل التدريب وعلامته كبيرة.'},
+ {id:'ex-scale',eff:2,data:'prep',t:'كلمات السلم الرسمي',
+  idea:'من السلالم الوزارية الحقيقية منطلّع العبارات اللي عليها علامة بالأسئلة المتكررة، وبتنعرض ملوّنة جنب الجواب.',
+  how:['منقرا سلالم الدورات.','لكل سؤال متكرر منحفظ العبارات اللي أخدت علامة.','الطالب بيشوف جوابه جنب عبارات السلم.'],
+  ex:'السلالم الوزارية موجودة بمجموعة الدورات لمعظم السنين، وناقص منها سلالم الدورة التانية لـ ٢٠٢٢ و٢٠٢٣.',
+  why:'<b>ليش مهمة:</b> الفرق بين جواب صح وجواب بياخد العلامة كاملة هو هالعبارات.'},
+ {id:'ex-examiner',eff:2,data:'prep',t:'صحّح ورقة غيرك',
+  idea:'الطالب بيلعب دور المصحّح: بيطلعله جواب طالب فيه نواقص، ومعه السلم الرسمي، وهو بيعطي العلامة.',
+  how:['بيطلع جواب فيه أغلاط مقصودة.','الطالب بيعطي علامة لكل بند من السلم.','بيطلعله التصحيح الحقيقي وليش نقصت العلامة.'],
+  ex:'مثال للتوضيح: جواب مسألة فيه القانون والتعويض صح، بس النتيجة بلا وحدة. كم بتنقص حسب السلم؟',
+  why:'<b>ليش مهمة:</b> لما الطالب يشوف بعين المصحّح، بيبطّل يخسر علامات مجانية.'},
+ {id:'ex-time',eff:1,data:'ready',t:'مدرّب الوقت',
+  idea:'وقت الامتحان بيتوزع على أقسام الورقة حسب علاماتها، وبالامتحان التجريبي بينبّه الطالب إذا تأخر.',
+  how:['التطبيق بيحسب لكل قسم وقته من علامته.','شريط وقت فوق كل قسم.','بالآخر: «صرفت ٢٠ دقيقة زيادة بالمسائل».'],
+  ex:'بالرياضيات ٦٠٠ درجة بـ ٢١٠ دقايق، يعني كل ٦٠ درجة إلها حوالي ٢١ دقيقة، والمسألة اللي عليها ١٠٠ درجة إلها حوالي ٣٥ دقيقة.',
+  why:'<b>ليش مهمة:</b> كتير طلاب بيعرفوا الحل وبيخسروا لأن الوقت خلص.'},
+ {id:'ex-gaps',eff:1,data:'ready',t:'خطة الأيام بين المواد',
+  idea:'برنامج الامتحانات الرسمي بيدخل التطبيق، وكل فترة بين مادتين بتتقسم على دروس المادة الجاية حسب وزنها ونقاط ضعف الطالب.',
+  how:['بيجي برنامج الوزارة جاهز أول ما ينتشر.','التطبيق بيحسب كم يوم قبل كل مادة.','بيوزع الدروس على الأيام، وآخر يوم دايماً دورة كاملة بالوقت.','الخطة بتتعدّل لحالها حسب نتايجه.'],
+  ex:'مثال للتوضيح: «قدامك ٣ أيام للرياضيات: اليوم الأول التحليل لأنه ٣٨٪ من الورقة، التاني الهندسة الفراغية والعقدية، التالت دورة كاملة بالوقت».',
+  why:'<b>ليش مهمة:</b> الأيام بين المواد أغلى وقت بالسنة، وأغلب الطلاب بيضيعوها بلا خطة.'},
+ {id:'ex-48h',eff:1,data:'prep',t:'حقيبة آخر ٤٨ ساعة',
+  idea:'لكل مادة صفحة وحدة: القوانين، والأسئلة الأكتر تكراراً، والاستنتاجات، وأشهر الأخطاء، وبتشتغل بلا نت.',
+  how:['بتنفتح قبل المادة بيومين.','بيمرق عليها بنص ساعة.','بيعلّم اللي ما بيعرفه فبيرجعله.'],
+  ex:'ورقة القوانين بالفيزياء موجودة، والحقيبة بتعمّمها على كل المواد وبتضيف عليها الأسئلة المتكررة.',
+  why:'<b>ليش مهمة:</b> ليلة المادة الطالب بدو شي مختصر ومضمون، مو كتاب كامل.'},
+ {id:'ex-ready',eff:2,data:'ready',t:'نسبة الجاهزية',
+  idea:'لكل مادة رقم واحد: قديش الطالب جاهز، محسوب من الامتحانات التجريبية ومن تغطيته للأقسام الأتقل علامة.',
+  how:['كل امتحان وتمرين بيدخل بالحساب.','الأقسام الأتقل بالورقة إلها وزن أكبر.','جنب الرقم: شو ناقصه بالضبط.'],
+  ex:'مثال للتوضيح: «جاهزيتك للفيزياء ٦٨٪، ناقصك مسائل التيار المتناوب».',
+  why:'<b>ليش مهمة:</b> بيعرف وين يركّز بالأسابيع الأخيرة بدل ما يعيد اللي بيعرفه.'},
+ {id:'ex-curriculum',eff:1,data:'ready',t:'حارس المنهاج',
+  idea:'أي جزء مو مطلوب بالامتحان بياخد إشارة «مو مطلوب»، وأي تعميم جديد من الوزارة بيوصل كإشعار.',
+  how:['منعلّم الأجزاء المحذوفة.','بتبين الإشارة جنب الدرس.','الإشعار بيوصل أول ما يطلع تعميم.'],
+  ex:'تعديلات ٢٠٢٥ شالت وحدة «أصل وتطور الحياة» وفقرة «تطور الدماغ» من العلوم، ونص «حماة الديار» من العربي. فحصنا كتاب العلوم بالتطبيق وما فيه الوحدة المحذوفة. وبتشرين الأول ٢٠٢٦ نفت الوزارة أي تعديل جديد على منهاج هالسنة، وورقة الإنكليزي ٢٠٢٦ مكتوب عليها «منهاج دمشق».',
+  why:'<b>ليش مهمة:</b> ساعة دراسة على درس محذوف هي ساعة ضايعة.'},
+ {id:'ex-offline',eff:2,data:'ready',t:'كل شي بلا نت',
+  idea:'الدورات والامتحانات التجريبية والحقيبة بتنزل عالجهاز، وبتشتغل وقت ينقطع النت أو الكهربا.',
+  how:['زر «نزّل المادة».','كل شي بيشتغل بلا اتصال.','النتايج بتتزامن لما يرجع النت.'],
+  ex:'الكتب أصلاً مدمجة بالتطبيق وبتشتغل بلا نت، وهاي بتكمّلها للدورات والامتحانات.',
+  why:'<b>ليش مهمة:</b> انقطاع الكهربا والنت بيوقف الدراسة بأهم الأيام.'},
+ {id:'ex-total',eff:2,data:'prep',t:'حاسبة المجموع والمفاضلة',
+  idea:'الطالب بيكتب العلامة المتوقعة بكل مادة، فبيطلع مجموعه من ٢٧٠٠، والكليات اللي كانت حدودها الدنيا السنة الماضية ضمن مجموعه.',
+  how:['بيعبّي علاماته المتوقعة.','بيطلع المجموع.','بتطلع الكليات اللي ضمن مجموعه حسب حدود المفاضلة الماضية.','«إذا زدت ٢٠ علامة بالرياضيات، بتفوت على كذا».'],
+  ex:'حدود مفاضلة الفرع العلمي ٢٠٢٥–٢٠٢٦ منشورة بموقع وزارة التعليم العالي كملف. حاولنا نقراه بس الموقع رفض الاتصال، فبدو تنزيل يدوي. وبدو تأكيد شو المواد اللي بتدخل بمجموع المفاضلة.',
+  why:'<b>ليش مهمة:</b> بتحوّل الدراسة لهدف واضح، والطالب بيحب يشاركها مع رفقاته.'},
+ {id:'ex-photo',eff:3,data:'ai',t:'صوّر السؤال',
+  idea:'الطالب بيصوّر سؤال من دورة أو ملزمة، والمدرّس الذكي بيحله خطوة خطوة وبيربطه بدرس الكتاب.',
+  how:['بيصوّر.','بيطلعله الحل خطوة خطوة.','بيطلعله الدرس وأسئلة شبيهة.'],
+  ex:'شاشة المدرّس الذكي موجودة بالتطبيق، وهاي بتضيف عليها الصورة.',
+  why:'<b>ليش مهمة:</b> أكتر شي بيعلق فيه الطالب بآخر شهر سؤال مو قادر يحله وما في حدا يسأله.'},
+ ]},
+
+{id:'math',name:'الرياضيات',short:'رياضيات',color:'#15803D',tint:'#EFF8F2',
+ exists:'قوانين الرياضيات مجمّعة، طرق الحل والأسرع منها، أشهر الأخطاء، مسائل محلولة من السهل للوزاري، حاسبات القوانين، ودورات المادة.',
+ features:[
+ {id:'math-steps',star:true,eff:1,data:'ready',t:'الحل خطوة بخطوة',
+  idea:'حلول الكتاب ما بتنعرض دفعة وحدة. كل خطوة مخبّاية، والطالب بيحاول يتوقعها قبل ما يكشفها.',
+  how:['بيقرا المسألة وبيحاول يحلها لحالو.','بيكبس «اكشف الخطوة الجاية» وبيقارن مع اللي كتبه.','بيعلّم على كل خطوة: عرفتها لحالي، أو لا.','بآخر الحل بتطلعلو نتيجته، متل «عرفت ٣ من ٤ خطوات»، وبتنحفظ.'],
+  demo:'steps',
+  why:'<b>ليش مهمة:</b> السلم بيعطي علامة لكل خطوة، فالطالب بيتعلّم يكتب الحل كامل مو بس الجواب. وكل حلول التمارين مكتوبة خطوات أصلاً، يعني ما بدها ولا كلمة محتوى جديد. وبورقة ٢٠٢٦ إجا تمرين متتاليات بالتدريج عليه ٦٠ درجة.'},
+ {id:'math-mistake',eff:2,data:'prep',t:'وين الغلطة؟',
+  idea:'حل كامل من الكتاب، بس فيه خطوة وحدة مغلوطة عن قصد. الطالب لازم يلاقيها.',
+  how:['بينعرض الحل كامل.','الطالب بيكبس عالخطوة اللي شايفها غلط.','التطبيق بيقلّو إذا صاب، وبيشرح الغلطة وكيف بتنصلّح.'],
+  ex:`من الكتاب: احسب المجموع ${M('½ + 1 + 3/2 + 2 + … + 10')}. بالنسخة المغلوطة منكتب «عدد الحدود ١٩» بدل ٢٠، فبيطلع المجموع غلط بدل ${M('S = 105')}. الطالب لازم يمسك هالخطوة.`,
+  why:'<b>ليش مهمة:</b> هي بند «أشهر الأخطاء»، بس الطالب بيكتشفها بنفسه فبتعلق براسه أكتر من قراءتها. بدها نسخة مغلوطة لكل حل، ومراجعة إنسان.'},
+ {id:'math-table',star:true,eff:3,data:'prep',t:'جدول التغيّرات المفرّغ',
+  idea:'متل الرسمات المفرّغة بالعلوم بالضبط، بس لجداول تغيّرات التوابع.',
+  how:['بيطلع جدول التابع فاضي: مجموعة التعريف، إشارة المشتق، الأسهم، النهايات والقيم.','الطالب بيكبس عالخانة وبيختار: موجب أو سالب، سهم طالع أو نازل، أو القيمة.','الخانة الصح بتخضرّ، والغلط بيحمرّ مع تلميح صغير.','وضع «تعلّم» بيكشف الجدول كامل، ووضع «اختبر حالك» بيفرّغه.'],
+  ex:`مثال للتوضيح، والحقيقي بيجي من توابع الكتاب نفسها: ${M('<i>f</i>(<i>x</i>) = <i>x</i> − ln <i>x</i>')} على ${M(']0, +∞[')}. المشتق ${M(FR('<i>x</i> − 1','<i>x</i>'))} سالب قبل الواحد وموجب بعده، فالتابع متناقص ثم متزايد، وقيمته الصغرى ${M('<i>f</i>(1) = 1')}. الطالب بيعبّي هالخانات بإيده.`,
+  why:'<b>ليش مهمة:</b> دراسة التابع وجدول تغيّراته من أكتر الأسئلة تكراراً، والجدول هو قلب الحل. بدها خط إنتاج متل الرسمات لاستخراج الجداول.'},
+ {id:'math-tangent',eff:2,data:'prep',t:'حرّك المماس',
+  idea:'منحني تابع من الكتاب، والطالب بيسحب نقطة عليه، فبيشوف المماس وميله وإشارة المشتق عم يتغيّروا قدامه.',
+  how:['بيسحب النقطة يمين ويسار عالمنحني.','المماس بيدور معها، والميل بينكتب برقم.','لما يصير الميل صفر بتلمع «قيمة حدّية».'],
+  ex:`بنفس التابع السابق: عند ${M('<i>x</i> = 1')} المماس بيصير أفقي والميل صفر، وهون بالضبط القيمة الصغرى.`,
+  why:'<b>ليش مهمة:</b> بيفهم ليش إشارة المشتق بتحدد التزايد والتناقص بدل ما يحفظها حفظ.'},
+ {id:'math-complex',eff:2,data:'ready',t:'المستوي العقدي التفاعلي',
+  idea:'الطالب بيسحب النقطة على المستوي، وبيشوف الطويلة والعمدة والشكل الأسي عم يتغيّروا فوراً.',
+  how:['بيسحب النقطة بإصبعه.','بينكتب العدد بشكله الجبري والمثلثي والأسي.','زر «دوّر» وزر «انسحاب» بيورجيه التحويل الهندسي.'],
+  ex:`${M('<i>z</i> = 1 + <i>i</i>')} طويلتها ${M('√2')} وعمدتها ${M('π/4')}. ضربها بـ ${M('<i>i</i>')} بيدوّرها ربع دورة، والطالب بيشوف الدوران بعينه.`,
+  why:'<b>ليش مهمة:</b> وحدتين كاملتين بالكتاب (الأعداد العقدية وتطبيقاتها بالهندسة) بيصيروا صورة بدل رموز. القوانين موجودة، ما بدها محتوى.'},
+ {id:'math-induction',eff:1,data:'ready',t:'مدرّب البرهان بالتدريج',
+  idea:'قالب ثابت بتلات خانات: التحقق من البداية، الفرض، والانتقال من p إلى p+1. جمل البرهان بتجي مخلوطة، والطالب بيرتّبها.',
+  how:['بتطلع جمل برهان من الكتاب مخلوطة.','بيسحب كل جملة لخانتها.','التطبيق بيصحّح الترتيب وبيشرح ليش كل جملة بمكانها.'],
+  ex:'تمارين البرهان بالتدريج الموجودة بوحدة المتتاليات، كل واحد منها بيتحول لتمرين ترتيب.',
+  why:'<b>ليش مهمة:</b> الطالب بيعرف الفكرة بس بيضيّع ترتيب الكتابة، والسلم بيحاسب على كل مرحلة.'},
+ {id:'math-3d',eff:3,data:'prep',t:'الفراغ بالأبعاد التلاتة',
+  idea:'مجسّم بيدوّره الطالب بإصبعه، وبيشوف المستقيم والمستوي ونقطة التقاطع والشعاع الناظمي.',
+  how:['بيختار تمرين من وحدات الفراغ.','بيدوّر المجسّم ليشوف الوضع النسبي.','بيكبس «أظهر الحل» فبتنرسم العناصر خطوة خطوة.'],
+  ex:'من «المستقيمات والمستويات في الفراغ»: هل المستقيم بيقطع المستوي أو بيوازيه؟ بيشوفها بعينه قبل ما يحسب.',
+  why:'<b>ليش مهمة:</b> تلات وحدات بالكتاب (الأشعة، الجداء السلمي، المستقيمات والمستويات) هي أصعب شي يتخيّله الطالب عالورق.'},
+ {id:'math-tree',eff:2,data:'prep',t:'شجرة الاحتمالات التفاعلية',
+  idea:'الطالب بيبني الشجرة فرع فرع وبيكتب الاحتمالات، والتطبيق بيتحقق فوراً.',
+  how:['بيقرا مسألة الكتاب.','بيضيف الفروع ويكتب احتمال كل فرع.','التطبيق بينبّهه إذا مجموع فروع أي عقدة مو واحد.','بيكبس على مسار فبينحسب احتماله تلقائياً.'],
+  ex:'سحب كرتين بدون إرجاع: احتمالات الفرع التاني بتتغيّر حسب الأول. إذا نسي يغيّرها، التطبيق بيكشفه.',
+  why:'<b>ليش مهمة:</b> أغلب غلطات الاحتمالات بتصير برسم الشجرة نفسها مو بالحساب.'},
+ {id:'math-law',eff:1,data:'ready',t:'القانون المناسب',
+  idea:'بطاقة فيها وضع، والطالب بيختار القانون الصح من أربعة قبل ما يبلّش يحل.',
+  how:['بتطلع البطاقة بالوضع والمعطيات.','بيختار القانون.','إذا غلط بيطلعلو متى بينستعمل القانون اللي اختاره ومتى لا.'],
+  ex:`من الكتاب: متتالية هندسية أساسها ${M('<i>q</i> = 3')} و ${M('<i>u</i><sub>1</sub> = −2')}، وبدك مجموع سبع حدود ← ${M('<i>S</i> = <i>u</i><sub>1</sub> '+FR('1 − <i>q</i><sup>7</sup>','1 − <i>q</i>'))} والجواب ${M('−2186')}.`,
+  why:'<b>ليش مهمة:</b> هي بند «متى يستخدم ومتى لا يستخدم». القوانين مجمّعة أصلاً.'},
+ {id:'math-timed',eff:2,data:'prep',t:'اختبار زمني بمستويات',
+  idea:'اختبار بمؤقّت: سهل ثم متوسط ثم وزاري ثم صعب، وبالآخر تحليل نقاط الضعف حسب الدرس.',
+  how:['بيختار الوحدة والمدة.','الأسئلة بتصعب تدريجياً.','بالنهاية: علامته، والوقت لكل سؤال، والدروس اللي لازم يرجعلها.'],
+  ex:'مثال للنتيجة: «خلّصت ١٠ أسئلة بـ ٢٢ دقيقة. ضعيف بالبرهان بالتدريج، ممتاز بالمتتاليات الحسابية».',
+  why:'<b>ليش مهمة:</b> بنود من ملف ميزات المادة: اختبارات زمنية، تحليل أخطاء الطالب، نقاط الضعف، خطة شخصية. بدها تصنيف صعوبة للتمارين.'},
+ ]},
+
+{id:'physics',name:'الفيزياء',short:'فيزياء',color:'#1D4ED8',tint:'#EEF3FD',
+ exists:'قوانين الفيزياء مجمّعة، النظري سؤال وجواب، اشتقاق القوانين واختيارها، مسائل الكتاب محلولة، حاسبات القوانين، ودورات المادة.',
+ features:[
+ {id:'phy-spring',star:true,eff:2,data:'ready',t:'محاكي النواس المرن',
+  idea:'نابض وجسم بيهتز قدام الطالب، وهو بيغيّر الكتلة والصلابة والسعة بإصبعه.',
+  how:['بيحرّك شريط الكتلة أو الصلابة.','الحركة بتسرع أو بتبطأ، والدور بينحسب فوراً بقانون الكتاب.','بيغيّر السعة فبيشوف إنو الدور ما تغيّر أبداً.'],
+  demo:'spring',
+  why:'<b>ليش مهمة:</b> بيشوف تعليل الكتاب بعينه بدل ما يحفظه: «لا يتعلّق الدور الخاص للنّواس المرن بسعة الاهتزاز». ومبهر للإعلان متل الرسمات. وبورقة ٢٠٢٦ إجا «برهن أن الحركة توافقية واستنتج دور النواس المرن» كسؤال اختياري عليه ٢٥ درجة.'},
+ {id:'phy-pendulums',eff:2,data:'ready',t:'النواس الثقلي ونواس الفتل',
+  idea:'نفس المحاكي لباقي نوّاسات الوحدة الأولى.',
+  how:['بيختار النواس.','بيغيّر الطول أو عزم العطالة أو ثابت الفتل.','بيشوف الدور عم يتغيّر مع القانون.'],
+  ex:`النواس البسيط ${M('<i>T</i> = 2π√(<i>L</i>/<i>g</i>)')}: بيطوّل الخيط فبيزيد الدور، وبيغيّر الكتلة فما بيتغيّر شي.`,
+  why:'<b>ليش مهمة:</b> تلات دروس من الوحدة الأولى بمحاكي واحد.'},
+ {id:'phy-graph',eff:2,data:'ready',t:'اقرأ المنحني واختار التابع',
+  idea:'منحني المطال مع الزمن بيتحرك، والطالب بيختار تابع المطال اللي بيطابقه.',
+  how:['بينرسم منحني المطال مع الزمن.','بيختار من أربع توابع.','إذا غلط، بينرسم منحني اختياره فوق الصح فبيشوف الفرق.'],
+  ex:`من الكتاب: هزازة سعتها ٨ سم ونبضها ${M('π')}، وبتبدأ من المطال الأعظمي السالب ← الصح ${M('<i>x</i> = 0.08 cos(π<i>t</i> + π)')}. الخيار ${M('8 cos(π<i>t</i> − π)')} غلط لأنو السعة لازم تتحوّل للمتر.`,
+  why:'<b>ليش مهمة:</b> سؤال الطور الابتدائي من أكتر الأسئلة اللي بيغلط فيها الطالب. أسئلة الاختيار موجودة.'},
+ {id:'phy-steps',eff:1,data:'ready',t:'الحل خطوة بخطوة',
+  idea:'نفس ميزة الرياضيات: حل المسألة بينكشف خطوة ورا خطوة.',
+  how:['بيحاول الخطوة لحالو.','بيكشفها وبيقارن.','بيعلّم وبتنحفظ نتيجته.'],
+  ex:'٢٧ مسألة حسابية بالنسخة الحالية حلولها مكتوبة خطوات جاهزة.',
+  why:'<b>ليش مهمة:</b> محرّك واحد بيخدم الرياضيات والفيزياء والكيمياء.'},
+ {id:'phy-law',eff:1,data:'ready',t:'اختر القانون',
+  idea:'مسألة من الكتاب بمعطياتها، والطالب بيختار القانون المناسب من أربعة قبل ما يحل.',
+  how:['بتطلع المسألة والمعطيات.','بيختار القانون.','إذا غلط، بيطلعلو ليش القانون اللي اختاره ما بيصلح هون.'],
+  ex:`بدك الدور، ومعطى الكتلة وثابت الصلابة ← ${M('<i>T</i><sub>0</sub> = 2π√(<i>m</i>/<i>k</i>)')}، مو ${M('<i>T</i> = 2π√(<i>L</i>/<i>g</i>)')}.`,
+  why:'<b>ليش مهمة:</b> بند حرفي من ملف ميزات المادة: «كيف نختار القانون المناسب».'},
+ {id:'phy-theory',eff:1,data:'prep',t:'النظري بالكلمات اللي عليها علامة',
+  idea:'الطالب بيسمّع التعريف أو التعليل لحالو، بعدين بيكشف الجواب والكلمات اللي عليها علامة ملوّنة، وبيعلّم كم وحدة جاب.',
+  how:['بيقرا السؤال وبيجاوب براسه أو عالورق.','بيكشف الجواب النموذجي.','بيكبس عالكلمات الملوّنة اللي جابها، وبتطلع علامته التقديرية.'],
+  ex:'«ما المقصود بقوة الإرجاع؟» ← «هي المحصّلة التي تُعيد الجسم إلى مركز الاهتزاز». الكلمات الملوّنة بالمثال: المحصّلة، تُعيد، مركز الاهتزاز.',
+  why:'<b>ليش مهمة:</b> ملف ميزات المادة بيقول «تنبيه لكلمات عليها علامة». في ٥٢ تعريف وتعليل جاهزين، بس تحديد الكلمات بدو مراجعة.'},
+ {id:'phy-units',eff:2,data:'prep',t:'حارس الوحدات',
+  idea:'بعد ما يحسب، الطالب بيكتب الجواب مع وحدته، والتطبيق بيمسكه إذا نسي يحوّل.',
+  how:['بيكتب الرقم.','بيختار الوحدة.','إذا ما حوّل، بيطلعلو تنبيه بالتحويل الصح.'],
+  ex:'بنفس سؤال الهزازة: ٨ سم لازم تصير 0.08 متر. الكتاب نفسه حاطط الخيار الغلط لأنها غلطة شائعة.',
+  why:'<b>ليش مهمة:</b> غلطة الوحدة بتضيّع علامة النتيجة حتى لو الطريقة صح.'},
+ {id:'phy-fluids',eff:2,data:'ready',t:'محاكي الموائع',
+  idea:'أنبوب بيضيق وبيوسع، والطالب بيشوف السرعة والضغط عم يتغيّروا، وجسم بيطفو أو بيغرق حسب الكثافة.',
+  how:['بيغيّر مقطع الأنبوب.','بيشوف السرعة بتزيد بالمقطع الضيق.','بيغيّر كثافة الجسم ويشوف دافعة أرخميدس.'],
+  ex:`درس ميكانيك الموائع: ${M('<i>A</i><sub>1</sub><i>v</i><sub>1</sub> = <i>A</i><sub>2</sub><i>v</i><sub>2</sub>')}. لما المقطع يصير النص، السرعة بتصير الضعف.`,
+  why:'<b>ليش مهمة:</b> قوانين الموائع بتصير حركة مفهومة بدل معادلات.'},
+ {id:'phy-relativity',eff:2,data:'ready',t:'النسبية بالأرقام',
+  idea:'شريط سرعة بيقرّب من سرعة الضوء، وعامل لورنتز وتمدّد الزمن وتقلّص الطول عم يتغيّروا.',
+  how:['بيحرّك شريط السرعة.','بيشوف ساعتين: وحدة مع المسافر ووحدة عالأرض.','بتنكتب القيم بقوانين الكتاب.'],
+  ex:`عند ٨٠٪ من سرعة الضوء: ${M('γ = 1/√(1 − 0.64) ≈ 1.67')}، يعني ساعة المسافر بتمشي أبطأ بهالنسبة.`,
+  why:'<b>ليش مهمة:</b> أغرب درس بالكتاب بيصير محسوس.'},
+ {id:'phy-circuit',eff:3,data:'prep',t:'محاكي الدارات الكهربائية',
+  idea:'دارة من وحدة الكهرباء والمغناطيسية، الطالب بيغيّر قيم عناصرها وبيشوف منحني التيار والتواتر.',
+  how:['بيختار الدارة من دروس الوحدة.','بيغيّر القيم بالأشرطة.','بيشوف المنحني والقيم المحسوبة.'],
+  ex:'بيتحدد شكلها النهائي حسب دروس الوحدة التانية بالكتاب.',
+  why:'<b>ليش مهمة:</b> الكهرباء أكتر وحدة بتحتاج تخيّل، والمحاكي بيختصر شرح طويل.'},
+ ]},
+
+{id:'chemistry',name:'الكيمياء',short:'كيمياء',color:'#C2410C',tint:'#FDF2EC',
+ exists:'المعادلات الكيميائية مجمّعة، بطاقات حفظ التفاعلات، قوانين الكيمياء، مسائل الكتاب محلولة، ودورات المادة.',
+ features:[
+ {id:'chem-nuclear',star:true,eff:1,data:'ready',t:'أكمل المعادلة النووية',
+  idea:'معادلات الكتاب بجسيم ناقص، الطالب بيختاره، وعدّادين للعدد الكتلي والذري بيخضرّوا لما تتوازن.',
+  how:['بتطلع المعادلة والجسيم مخفي.','بيختار: ألفا، بيتا، بوزيترون، أو نيوترون.','العدّادين بيقارنوا الطرفين.','بعدين بيختار نوع التحوّل.'],
+  demo:'nuclear',
+  why:'<b>ليش مهمة:</b> مصونية العددين الكتلي والذري هي مفتاح كل مسائل الوحدة الأولى، والمعادلات موجودة بالكتاب. وبورقة ٢٠٢٦ إجا سؤال معادلة تحوّل اليورانيوم ٢٣٥ لثوريوم بإصدار ألفا.'},
+ {id:'chem-halflife',eff:2,data:'ready',t:'عدّاد عمر النصف',
+  idea:'عيّنة نوى بتتنصّف قدام الطالب مع ساعة، وهو بيعدّ التنصيفات.',
+  how:['بتبلّش العيّنة بعدد النوى.','بيكبس «شغّل» وبيشوف النوى عم تنقص للنص كل فترة.','بيستنتج عمر النصف لحاله.'],
+  ex:`من الكتاب: ${M('8×10<sup>20</sup>')} نواة بتصير ${M('10<sup>20</sup>')} بعد ١٢٠ ثانية ← تلات تنصيفات، فعمر النصف ٤٠ ثانية.`,
+  why:'<b>ليش مهمة:</b> بيفهم التنصيف كحركة بدل قسمة على ٢ بلا معنى.'},
+ {id:'chem-belt',eff:2,data:'ready',t:'حزام الاستقرار التفاعلي',
+  idea:'رسم عدد النيوترونات مقابل البروتونات، والطالب بيحط النواة وبيتوقّع نوع تحوّلها.',
+  how:['بتطلع نواة.','بيحطها عالرسم.','بيختار نوع التحوّل، والتطبيق بيشرح بحسب مكانها من الحزام.'],
+  ex:'نواة فوق الحزام (نيوترونات زيادة) ← تحوّل بيتا. تحت الحزام ← بوزيترون أو أسر إلكتروني. هيك مشروح بالدرس.',
+  why:'<b>ليش مهمة:</b> بيربط النسبة بين النيوترونات والبروتونات بنوع التحوّل بصورة وحدة.'},
+ {id:'chem-given',eff:1,data:'ready',t:'خانة المعطيات',
+  idea:'قبل الحل، الطالب بيكبس عالأرقام بنص المسألة ليطلّع المعطيات، والتطبيق بيقارن مع المعطيات المحفوظة.',
+  how:['بيقرا نص المسألة.','بيكبس على كل معطى ويحدد شو هو.','التطبيق بيقلّه إذا نسي شي.'],
+  ex:`مسألة نواة الهليوم من الكتاب: ${M('<i>m</i><sub>1</sub> = 6.695×10<sup>−27</sup> kg')} و ${M('<i>m</i><sub>2</sub> = 6.4024×10<sup>−27</sup> kg')} و ${M('<i>c</i> = 3×10<sup>8</sup> m/s')}.`,
+  why:'<b>ليش مهمة:</b> ترتيب المعطيات أول خطوة بأي حل مرتب، والمعطيات مكتوبة جاهزة بكل مسألة.'},
+ {id:'chem-steps',eff:1,data:'ready',t:'الحل خطوة بخطوة',
+  idea:'نفس ميزة الرياضيات والفيزياء.',
+  how:['بيحاول الخطوة.','بيكشفها.','بيعلّم وبتنحفظ.'],
+  ex:'١٢ مسألة حسابية بالنسخة الحالية، منها طاقة ارتباط نواة الهليوم.',
+  why:'<b>ليش مهمة:</b> نفس المحرّك، مادة تالتة بلا كلفة.'},
+ {id:'chem-gas',eff:2,data:'ready',t:'محاكي الغازات',
+  idea:'مكبس فيه غاز، الطالب بيغيّر الضغط والحجم والحرارة وبيشوف الجزيئات عم تتحرك.',
+  how:['بيثبّت متغيّر.','بيحرّك التاني.','بيشوف التالت عم يتغيّر بالقانون.'],
+  ex:`${M('<i>PV</i> = <i>nRT</i>')}: بيضغط المكبس للنص بحرارة ثابتة ← الضغط بيتضاعف.`,
+  why:'<b>ليش مهمة:</b> الوحدة التانية كلها بتصير لعبة مفهومة.'},
+ {id:'chem-rate',eff:2,data:'prep',t:'منحني سرعة التفاعل',
+  idea:'منحني التركيز مع الزمن، والطالب بيرسم المماس ليحسب السرعة اللحظية، والقاطع للسرعة الوسطية.',
+  how:['بيختار لحظة عالمنحني.','بيحرّك المماس.','بيقرا الميل ويقارنه بالحل.'],
+  ex:'وحدة حركية التفاعلات: السرعة بتقل مع الزمن لأنو تركيز المتفاعلات عم يقل.',
+  why:'<b>ليش مهمة:</b> قراءة المنحنيات سؤال حسابي متكرر بهالوحدة.'},
+ {id:'chem-titration',eff:3,data:'prep',t:'المعايرة التفاعلية',
+  idea:'الطالب بيضيف المحلول نقطة نقطة، وبيشوف منحني الحموضة عم ينرسم ولون المشعر بيتغيّر.',
+  how:['بيكبس «أضف نقطة».','المنحني بيتقدّم.','عند القفزة بيعلّم نقطة التكافؤ وبيحسب التركيز.'],
+  ex:'الوحدة الرابعة (الكيمياء التحليلية): القفزة الكبيرة بالمنحني هي نقطة التكافؤ.',
+  why:'<b>ليش مهمة:</b> تجربة مخبرية كاملة بالموبايل، وأغلب المدارس ما بتعملها.'},
+ {id:'chem-cards',eff:1,data:'ready',t:'بطاقات التفاعلات العضوية',
+  idea:'المتفاعلات ظاهرة والنواتج مخفية، بوضعي «تعلّم» و«اختبر حالك»، ومراجعة بالتكرار الذكي.',
+  how:['بيشوف المتفاعلات.','بيتوقّع النواتج.','بيقلب البطاقة ويعلّم: عرفتها أو لا.'],
+  ex:'الوحدة الخامسة: حمض كربوكسيلي + كحول ← ؟ والجواب استر + ماء.',
+  why:'<b>ليش مهمة:</b> بند «حفظ التفاعلات»، وقسم البطاقات موجود، بس بدو وضع الاختبار.'},
+ {id:'chem-balance',eff:2,data:'ready',t:'وازن المعادلة الكيميائية',
+  idea:'معادلات الكتاب بعوامل فاضية، الطالب بيكبس زائد وناقص، وعدّاد كل ذرة بيخضرّ لما تتوازن.',
+  how:['بتطلع المعادلة بلا عوامل.','بيغيّر العوامل.','عدّاد كل عنصر بيقارن الطرفين.'],
+  ex:'بتنطبق على معادلات الوحدات العضوية والتحليلية من قسم «المعادلات مجمّعة».',
+  why:'<b>ليش مهمة:</b> الموازنة أساس كل الحسابات الكيميائية.'},
+ ]},
+
+{id:'science',name:'العلوم',short:'علوم',color:'#B91C1C',tint:'#FCEFEF',
+ exists:'رسمات الكتاب المفرّغة (كل الكتاب، ١٤٦ رسمة)، مخططات العمليات الحيوية، التعاليل سؤال وجواب، خرائط المفاهيم، جداول المقارنة، الوراثة، المصطلحات، ودورات المادة.',
+ features:[
+ {id:'sci-diagrams',status:'done',eff:3,data:'ready',t:'الرسمات المفرّغة',
+  idea:'موجودة وشغّالة عالموقع لكل الكتاب: ١٤٦ رسمة بوضعي «تعلّم» و«اختبر حالك».',
+  how:['الوحدة الأولى مجانية.','باقي الوحدات محتوى مدفوع بالتخزين.','الباقي: بناء نسخة الموبايل.'],
+  ex:'هي الميزة اللي كل هالتقرير ماشي على نمطها.',
+  why:'<b>ليش مهمة:</b> بورقة العلوم ٢٠٢٦ إجا سؤال تسمية ٤ أجزاء على رسمة عضو كورتي، وهاد بالضبط اللي بتدرّب عليه.'},
+ {id:'sci-order',star:true,eff:1,data:'ready',t:'رتّب العملية الحيوية',
+  idea:'خطوات أي عملية حيوية بتجي مخلوطة، والطالب بيرتّبها بالترتيب الصح.',
+  how:['بتطلع الخطوات مخلوطة.','بيكبس عليها بالترتيب.','الغلط بيهتز وبيتعدّ، وبالآخر بتطلع نتيجته.'],
+  demo:'order',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «تشرح جميع العمليات الحيوية خطوة بخطوة»، وقسم المخططات الانسيابية جاهز يتحوّل لترتيب. وبورقة ٢٠٢٦ إجا سؤال ترتيب المناطق اللي بتمر فيها النطفة.'},
+ {id:'sci-action',eff:3,data:'prep',t:'كمون العمل التفاعلي',
+  idea:'منحني كمون الغشاء، والطالب بيكبس «نبّه» بشدّات مختلفة وبيشوف شو بيصير.',
+  how:['تحت العتبة ما بيصير شي.','عند العتبة بيطلع كمون عمل كامل.','فوقها نفس الكمون، وهاد مبدأ الكل أو اللاشيء.','قنوات الصوديوم والبوتاسيوم بتفتح وبتسكّر بالرسم.'],
+  ex:'سؤال الكتاب: «ينطبق مبدأ الكل أو اللاشيء على الليف ولا ينطبق على العصب». بالمحاكي بيشوف الفرق: ليف واحد مقابل عصب فيه ألياف كتير.',
+  why:'<b>ليش مهمة:</b> أصعب درس بالوحدة الأولى بيصير مفهوم بدقيقة.'},
+ {id:'sci-taalil',eff:1,data:'prep',t:'علّل وشوف علامتك',
+  idea:'الطالب بيكتب تعليله، بعدين بيطلع الجواب النموذجي والكلمات اللي عليها علامة ملوّنة، وبيعلّم شو جاب منها.',
+  how:['بيقرا التعليل.','بيكتب جوابه أو بيقوله براسه.','بيكشف الجواب ويعلّم الكلمات اللي جابها.'],
+  ex:'«علّل: لعناصر القوس الانعكاسية النخاعية الكروناكسي نفسه» ← «لأن قيمة الكروناكسي واحدة في النسج ذات الوظيفة الواحدة المتكاملة».',
+  why:'<b>ليش مهمة:</b> في ١١٥ تعليل بالوحدة الأولى بالنسخة الحالية، وملف ميزات المادة طالب «تنويه للكلمات التي عليها علامة».'},
+ {id:'sci-punnett',eff:2,data:'prep',t:'جدول التصالب التفاعلي',
+  idea:'بمسائل الوراثة، الطالب بيكتب أعراس الأبوين وبيعبّي المربعات، والتطبيق بيصحّح وبيحسب النسب.',
+  how:['بيقرا المسألة.','بيحدد الأعراس.','بيعبّي الجدول، وبتطلع النسب تلقائياً.'],
+  ex:'مثال للتوضيح: تصالب فردين هجينين ← النسب ١ : ٢ : ١ بالنمط الوراثي و ٣ : ١ بالنمط الظاهري.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «مسائل الكتاب للوراثة مع الحل».'},
+ {id:'sci-brain',eff:2,data:'prep',t:'خريطة الدماغ التفاعلية',
+  idea:'رسمة الدماغ بمناطق ملوّنة، الطالب بيكبس عالباحة فبتطلع وظيفتها، وبالاختبار بيطلعله الاسم وهو بيدلّ عالمكان.',
+  how:['وضع «تعلّم»: كبسة عالمنطقة بتطلّع اسمها ووظيفتها.','وضع «اختبر حالك»: بيطلع الاسم وهو بيدلّ.','بتنحفظ نتيجته.'],
+  ex:'درس وظائف الجهاز العصبي: الباحات الحسية والحركية والترابطية.',
+  why:'<b>ليش مهمة:</b> امتداد طبيعي للرسمات، بس بالمناطق بدل الأسماء.'},
+ {id:'sci-feedback',eff:2,data:'prep',t:'حلقة التلقيم الراجع',
+  idea:'رسم متحرك للوطاء والنخامية والدرقية، الطالب بيزيد أو بينقص هرمون وبيشوف كيف بتتصرف الباقية.',
+  how:['بيحرّك مستوى هرمون.','الأسهم بتتحرك بالحلقة.','بيطلع اسم نوع التلقيم.'],
+  ex:'من درس آليات السيطرة على إفراز الغدد الصم: زيادة هرمون الدرقية بتقلّل إفراز النخامية، وهاد تلقيم راجع سلبي.',
+  why:'<b>ليش مهمة:</b> الحلقة بتتفهم بالحركة أسرع من أي مخطط ثابت.'},
+ {id:'sci-swipe',eff:1,data:'ready',t:'صح وخطأ بالسحب',
+  idea:'بطاقات بتنسحب يمين للصح ويسار للغلط، سريعة متل الألعاب، والغلط بيرجع لاحقاً.',
+  how:['بتطلع العبارة.','بيسحب.','بيطلعله التصحيح بسطر.'],
+  ex:'«يمتد النخاع الشوكي حتى مستوى الفقرة القطنية الثانية» ← صح.',
+  why:'<b>ليش مهمة:</b> ٥٦ سؤال صح وخطأ جاهزين بالوحدة الأولى.'},
+ {id:'sci-compare',eff:1,data:'ready',t:'قارن جنب جنب',
+  idea:'جدول مقارنة بعمودين، الخانات مخفية، والطالب بيكشفها وحدة وحدة.',
+  how:['بيشوف وجه المقارنة.','بيتوقّع الخانتين.','بيكشف ويعلّم.'],
+  ex:'القوس وحيدة المشبك: ما فيها عصبون بيني. ثنائية المشابك: فيها عصبون بيني واحد.',
+  why:'<b>ليش مهمة:</b> ٢٣ مقارنة وقسم جداول جاهزين.'},
+ {id:'sci-case',eff:1,data:'prep',t:'الحالة المرضية',
+  idea:'بطاقة أعراض متل قصة مريض، والطالب بيشخّص المرض من أمراض الكتاب.',
+  how:['بيقرا القصة.','بيختار المرض.','بيطلعله السبب من الدرس.'],
+  ex:'درس أمراض الجهاز العصبي: باركنسون، ألزهايمر، الشقيقة، التصلّب اللويحي، الصرع.',
+  why:'<b>ليش مهمة:</b> طريقة ممتعة لحفظ درس كله أسماء.'},
+ ]},
+
+{id:'arabic',name:'العربي',short:'عربي',color:'#7C4A1E',tint:'#F7F0E9',
+ exists:'القصائد، القراءة والمطالعة، خرائط الأدب، جداول النحو، الإعلال والإبدال، تدريبات الإعراب، البلاغة، التعبير المحلول، مراجعة ليلة الامتحان، ودورات بسلالمها (٢٢٢ سؤال).',
+ features:[
+ {id:'ar-poem',star:true,eff:1,data:'ready',t:'القصيدة المفرّغة',
+  idea:'للحفظ: كلمات البيت بتختفي شوي شوي لحد ما الطالب يقدر يقوله كامل من حفظه.',
+  how:['بيقرا الأبيات كاملة.','بيكبس «أصعب» فبتختفي كلمات أكتر.','بيكبس عالفراغ ليتأكد من الكلمة.','بآخر مستوى البيت كله فاضي.'],
+  demo:'poem',
+  why:'<b>ليش مهمة:</b> الشواهد الشعرية بتلزم بالتحليل والتعبير، والحفظ أصعب شي عالطالب. ونفس المحرّك بيخدم الآيات بالديانة. وبورقة ٢٠٢٦ موضوع التعبير الأساسي عليه ١٠٠ درجة، ولازم ينكتب بشواهد محفوظة من الكتاب.'},
+ {id:'ar-irab',eff:2,data:'prep',t:'الإعراب باللمس',
+  idea:'الطالب بيكبس على أي كلمة بالبيت فبيطلع إعرابها، وبوضع الاختبار بيختار الإعراب الصح.',
+  how:['كبسة عالكلمة بتطلّع إعرابها.','وضع الاختبار بيطلّع خيارات.','بتنحفظ الكلمات اللي غلط فيها.'],
+  ex:'«يا عروسَ المجدِ»: يا حرف نداء، عروسَ منادى منصوب لأنه مضاف، المجدِ مضاف إليه مجرور.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «إعراب القصائد». بدو إعراب كل كلمة ومراجعة أستاذ.'},
+ {id:'ar-meaning',eff:1,data:'ready',t:'معنى الكلمة على الكلمة',
+  idea:'الكلمات الصعبة بالقصيدة ملوّنة، وكبسة عليها بتطلّع معناها فوقها.',
+  how:['بيقرا القصيدة.','بيكبس عالكلمة الملوّنة.','بتنضاف لبطاقات مراجعته.'],
+  ex:'من الكتاب: طمى الخطب = علا الأمر العظيم واشتدّ. الجدث = القبر. الميامين = المباركون. يرزحون = يخضعون ويثقلون.',
+  why:'<b>ليش مهمة:</b> سؤال المفردات ثابت، والمعاني موجودة بالكتاب الرقمي.'},
+ {id:'ar-evidence',eff:2,data:'ready',t:'ظلّل الدليل',
+  idea:'سؤال تحليل من الكتاب، والطالب بيظلّل الكلمات بالنص كدليل، والتطبيق بيقارن مع الحل.',
+  how:['بيقرا السؤال.','بيظلّل الكلمات بإصبعه.','بيطلعله كم وحدة صاب من الحل.'],
+  ex:'«اعتمد الشاعر النمط السرديّ في المقطع الثاني. هات مؤشّرين» ← لازم يظلّل الأفعال الماضية: شقّ، تهادى، أتى، رفّت، انتشت، تغنّت.',
+  why:'<b>ليش مهمة:</b> أسئلة «هات من النص» و«استخرج» عليها علامات كتير، وهي تدريب عملي عليها.'},
+ {id:'ar-shahid',eff:1,data:'ready',t:'الشاهد المناسب',
+  idea:'فكرة من مواضيع التعبير، والطالب بيختار البيت اللي بيصلح شاهد إلها.',
+  how:['بتطلع الفكرة.','بيختار من أبيات.','بيطلعله ليش البيت مناسب.'],
+  ex:'فكرة «التضحية في سبيل الوطن» ← «لن ترَي حفنةَ رملٍ فوقها لم تُعطَّر بدمٍ حرٍّ أبي».',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «أكتر من بيت لكل فكرة».'},
+ {id:'ar-timeline',eff:1,data:'ready',t:'خط الأدب الزمني',
+  idea:'شريط زمني بيمشي عليه الطالب: الشعراء والمراحل والأحداث.',
+  how:['بيسحب عالخط.','كبسة عالشاعر بتطلّع بطاقته.','اختبار: رتّب الشعراء زمنياً.'],
+  ex:'عمر أبو ريشة (١٩١٠–١٩٩٠)، محمود درويش (١٩٤١–٢٠٠٨)، ومراحل أدب القضية الفلسطينية التلاتة.',
+  why:'<b>ليش مهمة:</b> أسئلة التعريف بالأديب والمراحل بتصير صورة.'},
+ {id:'ar-sarf',eff:2,data:'prep',t:'مختبر الإعلال والإبدال',
+  idea:'بتطلع كلمة، والطالب بيحدد أصلها ونوع الإعلال أو الإبدال وسببه.',
+  how:['بيشوف الكلمة.','بيختار الأصل والنوع.','بيطلعله الشرح.'],
+  ex:'مثال للتوضيح: «قال» أصلها «قَوَلَ»، الواو متحركة وقبلها فتح فانقلبت ألفاً.',
+  why:'<b>ليش مهمة:</b> جداول الصرف موجودة، بس الطالب بدو يتمرّن عليها مو يقراها.'},
+ {id:'ar-essay',eff:2,data:'ai',t:'مخطط موضوع التعبير',
+  idea:'الطالب بيرتّب أفكار الموضوع ويحط تحت كل فكرة شاهد، والتطبيق بيعدّ الأفكار والشواهد. والتصحيح الكامل بسلم الوزارة عن طريق المدرّس الذكي.',
+  how:['بيختار الموضوع.','بيعبّي المخطط.','بيبعت التعبير للتصحيح.'],
+  ex:'مواضيع الكتاب المحلولة بتصير نماذج للمقارنة.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «تصحيح التعبير وفق سلم الوزارة».'},
+ {id:'ar-night',eff:1,data:'ready',t:'ليلة الامتحان بمؤقّت',
+  idea:'الـ ٣٥ سؤال الموجودين بقسم «مراجعة ليلة الامتحان» بيصيروا جولة سريعة بمؤقّت ونتيجة.',
+  how:['بيبلّش الجولة.','بيجاوب بوقت محدد.','بيطلعله الغلط ليرجعله.'],
+  ex:'نفس الأسئلة الموجودة، بس بشكل تحدّي.',
+  why:'<b>ليش مهمة:</b> شغل قليل على محتوى جاهز.'},
+ ]},
+
+{id:'english',name:'الإنكليزي',short:'إنكليزي',color:'#BE185D',tint:'#FCEFF5',
+ exists:'نصوص الكتاب ومفرداتها، التعابير الاصطلاحية، القواعد ومتى تُستخدم، الأنشطة المحلولة، ودورات المادة.',
+ features:[
+ {id:'en-fix',star:true,eff:1,data:'ready',t:'صحّح الجملة',
+  idea:'جمل تمارين الكتاب، الطالب بيحكم صح أو غلط، بعدين بيشوف التصحيح وسببه بالعربي.',
+  how:['بيقرا الجملة.','بيكبس صح أو غلط.','بيطلعله التصحيح والسبب.','بالآخر نتيجته.'],
+  demo:'english',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «صحح إجابات الطالب مع شرح سبب الخطأ»، والتمارين وحلولها موجودة. وبورقة ٢٠٢٦ تصحيح الأفعال بين قوسين عليه ١٨ درجة.'},
+ {id:'en-text',eff:2,data:'prep',t:'النص اللي بيترجم حالو',
+  idea:'نص الكتاب، أي كلمة صعبة بكبسة بيطلع معناها، وكل كلمة بيكبس عليها بتنضاف لبطاقاته.',
+  how:['بيقرا النص.','بيكبس عالكلمة.','بتنحفظ ببطاقاته للمراجعة.'],
+  ex:'من نص <bdi>Future Careers</bdi>: كلمة <bdi>aptitude</bdi> ← الاستعداد الفطريّ، القدرة الطبيعية.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «أصعب مفردات النص بشكل مترجم». بدو ربط المعاني بالنص.'},
+ {id:'en-tenses',eff:2,data:'ready',t:'خريطة الأزمنة',
+  idea:'خط زمن، والطالب بيسحب كل جملة لمكانها: حدث خلص، حدث بلّش ولسا صحيح، وهيك.',
+  how:['بتطلع الجملة.','بيسحبها عالخط.','بيطلعله اسم الزمن وليش.'],
+  ex:'من الكتاب: حدث انتهى بالماضي ← <bdi>Past Simple</bdi>. شي بلّش بالماضي ولسا صحيح ← <bdi>Present Perfect</bdi>.',
+  why:'<b>ليش مهمة:</b> الأزمنة أكتر شي بيلخبط الطالب، والخط بيخليها صورة.'},
+ {id:'en-order',eff:1,data:'ready',t:'رتّب الجملة',
+  idea:'كلمات جملة مخلوطة، الطالب بيكبسها بالترتيب ليبني الجملة الصح.',
+  how:['بتطلع الكلمات مخلوطة.','بيرتّبها.','بيطلعله الصح.'],
+  ex:'من الكتاب: <bdi>You really deserve this honour</bdi> بتجي مخلوطة.',
+  why:'<b>ليش مهمة:</b> تدريب عالكتابة والترجمة.'},
+ {id:'en-response',eff:1,data:'ready',t:'الرد المناسب',
+  idea:'موقف يومي، والطالب بيختار الرد المناسب: تهنئة، مواساة، وهيك.',
+  how:['بيقرا الموقف.','بيختار الرد.','بيطلعله التعبير الصح.'],
+  ex:'من الكتاب: «فريق مدرستك ربح النهائي» ← <bdi>Congratulations! You really deserve this honour.</bdi>',
+  why:'<b>ليش مهمة:</b> قسم الإنكليزي اليومي بالكتاب عليه أسئلة مباشرة.'},
+ {id:'en-reading',eff:2,data:'prep',t:'القراءة مع الدليل',
+  idea:'أسئلة الفهم على النص، وبعد الجواب بتلمع الجملة بالنص اللي فيها الدليل.',
+  how:['بيجاوب.','بتلمع الجملة الدليل.','بيتعلّم وين يدوّر بالمرة الجاية.'],
+  ex:'سؤال معنى <bdi>aptitude</bdi> ← بتلمع جملتها بنص <bdi>Future Careers</bdi>.',
+  why:'<b>ليش مهمة:</b> بيعلّم الطالب يرجع للنص بدل ما يخمّن.'},
+ {id:'en-srs',eff:1,data:'ready',t:'المفردات والتعابير بالتكرار الذكي',
+  idea:'البطاقات الموجودة بتصير مراجعة ذكية: اللي بيعرفه بيرجع بعد أسبوع، واللي غلط فيه بيرجع بكرا.',
+  how:['بيقلب البطاقة.','بيعلّم: سهلة، وسط، صعبة.','التطبيق بيرتّب مواعيد الرجعة.'],
+  ex:'قسم التعابير الاصطلاحية الموجود.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «احفظ مستوى الطالب وزيد الصعوبة تدريجياً».'},
+ {id:'en-writing',eff:2,data:'ai',t:'الكتابة بقائمة تحقّق',
+  idea:'الطالب بيكتب الفقرة، والتطبيق بيعدّ الكلمات وأدوات الربط وبيذكّره بعناصر الفقرة. والتصحيح الكامل بالمدرّس الذكي.',
+  how:['بيختار الموضوع.','بيكتب.','بيشوف القائمة وبيبعت للتصحيح.'],
+  ex:'مواضيع الكتاب المجمّعة.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «التدريب على الكتابة».'},
+ {id:'en-translate',eff:2,data:'prep',t:'الترجمة بالقطع',
+  idea:'جملة عربية، والطالب بيوصل قطعها بقطع إنكليزية بالترتيب.',
+  how:['بتطلع الجملة.','بيوصل القطع.','بيطلعله الترجمة الكاملة.'],
+  ex:'بتنبنى من جمل نصوص الكتاب.',
+  why:'<b>ليش مهمة:</b> سؤال الترجمة بالامتحان.'},
+ ]},
+
+{id:'french',name:'الفرنسي',short:'فرنسي',color:'#7E22CE',tint:'#F5EFFC',
+ exists:'نصوص الكتاب ومفرداتها، بطاقات المفردات، القواعد ومتى تُستخدم، تمارين التوصيل، الأنشطة المحلولة، ودورات المادة.',
+ features:[
+ {id:'fr-grammar',star:true,eff:1,data:'ready',t:'القاعدة بخيار وشرح',
+  idea:'جملة من تمارين الكتاب بفراغ، الطالب بيختار، وبيطلعله فوراً ليش الجواب صح أو غلط.',
+  how:['بيقرا الجملة.','بيختار من أربعة.','بيطلعله الشرح بالعربي.'],
+  demo:'french',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «تصحيح مع تفسير الأخطاء»، والشرح مكتوب بالكتاب الرقمي. وبورقة ٢٠٢٦ قسم القواعد عشر أسئلة اختيار عليها ٨٠ درجة، وفيه أدوات الغاية والتنازل.'},
+ {id:'fr-conj',eff:2,data:'prep',t:'دولاب التصريف',
+  idea:'فعل من الكتاب وزمن عشوائي، الطالب بيصرّفه مع الضمائر وبيتصحّح فوراً.',
+  how:['الدولاب بيختار فعل وزمن.','بيكتب التصريف.','بيتلوّن الصح والغلط.'],
+  ex:'من الكتاب: <bdi>de façon que les athlètes (pouvoir) …</bdi> ← <bdi>puissent</bdi>.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «تدريبات على الأزمنة».'},
+ {id:'fr-text',eff:2,data:'prep',t:'النص اللي بيترجم حالو',
+  idea:'متل الإنكليزي: كبسة عالكلمة بتطلّع معناها وبتنحفظ ببطاقاته.',
+  how:['بيقرا.','بيكبس.','بيراجع.'],
+  ex:'نصوص الوحدة الأولى عن الأعياد والتقاليد.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «أصعب مفردات النص بشكل مترجم».'},
+ {id:'fr-tf',eff:1,data:'ready',t:'صح وخطأ مع الجملة الدليل',
+  idea:'عبارات عن النص، والطالب بيحكم، وبعدها بتلمع الجملة من النص اللي بتثبت.',
+  how:['بيحكم.','بتلمع الجملة.','بيطلعله التصحيح.'],
+  ex:'من الكتاب: هدف اليوم العالمي للمرأة ← النص بيقول <bdi>la lutte pour les droits des femmes</bdi>.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «نص وعليه صح وخطأ».'},
+ {id:'fr-sort',eff:1,data:'ready',t:'صنّف الأحداث',
+  idea:'بطاقات أحداث، الطالب بيسحبها لتلات سلال: ثقافي، بين الثقافات، ترفيهي.',
+  how:['بتطلع البطاقة.','بيسحبها للسلة.','بيطلعله الصح.'],
+  ex:'من الوحدة الأولى: <bdi>la fête de la musique</bdi>، <bdi>le Nouvel An chinois</bdi>، <bdi>le Carnaval de Paris</bdi>.',
+  why:'<b>ليش مهمة:</b> نفس تمرين الكتاب بشكل لعبة.'},
+ {id:'fr-dialog',eff:2,data:'prep',t:'الحوار بأدوار',
+  idea:'حوار من الكتاب، الطالب بياخد دور شخص وبيكمّل جملته من خيارات.',
+  how:['بيختار الدور.','بيكمّل جمله.','بيشوف الحوار كامل.'],
+  ex:'من حوارات الكتاب الشفهية.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «محادثات».'},
+ {id:'fr-srs',eff:1,data:'ready',t:'بطاقات المفردات بالتكرار الذكي',
+  idea:'بطاقات المفردات الموجودة بمواعيد رجعة ذكية.',
+  how:['بيقلب.','بيعلّم.','بيرجعله بموعده.'],
+  ex:'قسم بطاقات المفردات الموجود.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «احفظ الكلمات المهمة».'},
+ {id:'fr-match',eff:1,data:'ready',t:'التوصيل بمؤقّت',
+  idea:'قسم التوصيل الموجود بيصير تحدّي بمؤقّت ونتيجة.',
+  how:['بيبلّش المؤقّت.','بيوصل.','بيطلعله الوقت والغلط.'],
+  ex:'تمارين التوصيل الموجودة.',
+  why:'<b>ليش مهمة:</b> شغل قليل على قسم جاهز.'},
+ {id:'fr-writing',eff:2,data:'ai',t:'قالب التعبير الكتابي',
+  idea:'قالب فقرات جاهز للتعبير، والتصحيح الكامل بالمدرّس الذكي.',
+  how:['بيختار الموضوع.','بيعبّي القالب.','بيبعت للتصحيح.'],
+  ex:'مواضيع التعبير الكتابي بالكتاب.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «اختبارات كاملة» بقسمها الكتابي.'},
+ ]},
+
+{id:'islamic',name:'الديانة',short:'ديانة',color:'#5E6B1F',tint:'#F3F5EA',
+ exists:'آيات الكتاب مجمّعة، أحاديث الكتاب مجمّعة، الأحكام الشرعية، جداول المقارنة، ودورات المادة.',
+ features:[
+ {id:'is-verse',star:true,eff:1,data:'ready',t:'الآية المفرّغة',
+  idea:'للاستحفاظ: كلمات الآية بتختفي شوي شوي لحد ما يقدر يقولها كاملة، بنص الكتاب حرفياً.',
+  how:['بيقرا الآية كاملة.','بيكبس «أصعب».','بيكبس عالفراغ ليتأكد.','بآخر مستوى الآية كلها من حفظه.'],
+  demo:'verse',
+  why:'<b>ليش مهمة:</b> وحدة «التفسير والاستحفاظ» بالكتاب، ونفس محرّك القصيدة بالعربي. وبورقة ٢٠٢٦ تسميع آيتين من سورة البقرة عليه ٣٠ درجة، والسلم بينقص ٣ علامات عن كل غلطة.'},
+ {id:'is-ending',eff:1,data:'ready',t:'ختام الآية',
+  idea:'آية بلا خاتمتها، والطالب بيختار الخاتمة الصح، وبعدين بيشوف الحكمة منها.',
+  how:['بتطلع الآية.','بيختار الخاتمة.','بيطلعله الحكمة من الكتاب.'],
+  ex:'من الكتاب: الآية التالتة من النص خُتمت بـ ﴿تَعَالَى عَمَّا يُشْرِكُونَ﴾، وخواتيم الآيات الأخيرة بالدرس بتدل على التفكّر والتذكّر والتعقّل.',
+  why:'<b>ليش مهمة:</b> أسئلة «الحكمة من ختم الآية» موجودة بالكتاب.'},
+ {id:'is-map',eff:1,data:'ready',t:'خريطة سورة النحل',
+  idea:'السورة مقسّمة عالدروس بلون لكل درس، كبسة عالمقطع بتطلّع موضوعه.',
+  how:['بيشوف السورة كشريط ملوّن.','بيكبس عالمقطع.','اختبار: «الآيات ٦٥–٧٢ موضوعها؟»'],
+  ex:'من الكتاب: ١–١٣ نِعم الله مدعاة للتوحيد، ١٤–٢٦ الخالق المتصرّف، ٥١–٦٤ القادر المعبود، ٦٥–٧٢ مظاهر القدرة، ٧٥–٨١ دلائل العظمة، ٨٩–٩٧ مبادئ وقيم خالدة، ١٢٠–١٢٨ أسس الدعوة.',
+  why:'<b>ليش مهمة:</b> الطالب بيشوف الوحدة كلها بنظرة.'},
+ {id:'is-tajweed',eff:3,data:'prep',t:'أحكام التلاوة بالألوان',
+  idea:'الآية ملوّنة حسب أحكام التجويد، كبسة عالكلمة بتطلّع الحكم، وبالاختبار بيحدد الحكم بنفسه.',
+  how:['بيشوف الآية ملوّنة.','بيكبس عالكلمة.','بالاختبار بيحدد الحكم.'],
+  ex:'بالكتاب أسئلة تلاوة وتطبيق تجويدي على آيات الدروس.',
+  why:'<b>ليش مهمة:</b> مبهرة، بس التلوين لازم يراجعه أستاذ مختص قبل النشر.'},
+ {id:'is-tf',eff:1,data:'ready',t:'صح وخطأ مع الدليل',
+  idea:'عبارة، والطالب بيحكم، وبعدها بيطلع الدليل من الآية.',
+  how:['بيحكم.','بيطلع الدليل.','بيتعلّم الربط.'],
+  ex:'من الكتاب: «الأصنامُ التي تُدعى من دون الله تخلق كما يخلق الله» ← خطأ، والدليل ﴿وَالَّذِينَ يَدْعُونَ مِن دُونِ اللَّهِ لَا يَخْلُقُونَ شَيْئًا وَهُمْ يُخْلَقُونَ﴾.',
+  why:'<b>ليش مهمة:</b> الأسئلة وأدلتها جاهزة.'},
+ {id:'is-link',eff:1,data:'prep',t:'وصّل الحكم بدليله',
+  idea:'أحكام شرعية بجهة، وآيات وأحاديث بجهة، والطالب بيوصل.',
+  how:['بيوصل.','بيطلعله الصح.','بيرجعله الغلط.'],
+  ex:'من قسم الأحكام الشرعية الموجود.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «الأحكام الموجودة في الكتاب».'},
+ {id:'is-words',eff:1,data:'ready',t:'مفردات الآية والحديث باللمس',
+  idea:'الكلمات الصعبة ملوّنة، كبسة بتطلّع معناها.',
+  how:['بيقرا.','بيكبس.','بيراجع.'],
+  ex:'شرح مفردات الآيات والأحاديث من الكتاب.',
+  why:'<b>ليش مهمة:</b> بندين من ملف ميزات المادة: «شرح مفردات الآيات» و«الأحاديث».'},
+ {id:'is-keywords',eff:1,data:'prep',t:'الكلمات اللي عليها علامة',
+  idea:'متل العلوم: الجواب النموذجي بكلماته الملوّنة، والطالب بيعلّم شو جاب.',
+  how:['بيجاوب.','بيكشف.','بيعلّم.'],
+  ex:'على أسئلة الاستنتاج والتحليل بالكتاب.',
+  why:'<b>ليش مهمة:</b> بند من ملف ميزات المادة: «الكلمات التي يحاسب عليها سلم التصحيح».'},
+ {id:'is-srs',eff:1,data:'ready',t:'حفظ ذكي بالتكرار',
+  idea:'الآيات والأحاديث بترجع للطالب بمواعيد ذكية لحد ما تثبت.',
+  how:['بيحفظ.','بيعلّم.','بترجعله بموعدها.'],
+  ex:'الآيات والأحاديث المجمّعة.',
+  why:'<b>ليش مهمة:</b> بند حرفي من ملف ميزات المادة: «حفظ ذكي باستخدام التكرار».'},
+ ]},
+
+{id:'shared',name:'لكل المواد',short:'لكل المواد',color:'#C2410C',tint:'#FFF4EA',
+ exists:'ميزات بتنبني مرة وحدة وبتشتغل بالكتب الثمانية.',
+ features:[
+ {id:'all-scale',star:true,eff:1,data:'ready',t:'صحّح ورقتك بسلم الوزارة',
+  idea:'الطالب بيحل سؤال الدورة عالورق، بعدين بتنكشف بنود السلم وحدة وحدة وهو بيعلّم شو جاب، والتطبيق بيجمع علامته.',
+  how:['بيحل عالورق.','بيكشف البنود.','بيعلّم كل بند.','بتطلع علامته من الدرجة الكاملة.'],
+  ex:'مثال للتوضيح: سؤال عليه ٤٠ درجة، السلم أربع بنود كل واحد ١٠، علّم تلاتة ← ٣٠ من ٤٠.',
+  why:'<b>ليش مهمة:</b> السلالم مكتوبة بقسم الدورات. العربي فيه ٢٢٢ سؤال جاهز بسلالمه هلق، وباقي المواد بعد تفريغ دوراتها.'},
+ {id:'all-srs',eff:2,data:'ready',t:'المراجعة الذكية بالتكرار المتباعد',
+  idea:'كل سؤال غلط فيه الطالب بيرجعله بعد يوم، بعدين تلات أيام، بعدين أسبوع، لحد ما يثبت.',
+  how:['بيحل.','الغلط بيدخل قائمة المراجعة.','كل يوم بتطلعله مراجعته.'],
+  ex:'بيشتغل على كل التمارين الموجودة بالمواد الثمانية.',
+  why:'<b>ليش مهمة:</b> بيرجّع الطالب للتطبيق كل يوم.'},
+ {id:'all-weak',eff:2,data:'ready',t:'خريطة نقاط الضعف',
+  idea:'لوحة لكل مادة، كل درس بلون حسب نسبة الصح: أخضر، أصفر، أحمر.',
+  how:['التطبيق بيجمع نتايجه.','بيلوّن الدروس.','كبسة عالأحمر بتفتح تدريب عليه.'],
+  ex:'«الرياضيات: البرهان بالتدريج أحمر، المتتاليات أخضر».',
+  why:'<b>ليش مهمة:</b> بندين: «تحديد نقاط الضعف» و«خطة تدريب شخصية».'},
+ {id:'all-exam',eff:2,data:'prep',t:'امتحان تجريبي كامل',
+  idea:'دورة كاملة بمدة الامتحان الحقيقية، وبالآخر علامة تقديرية بالسلم.',
+  how:['بيبلّش المؤقّت.','بيحل.','بيصحّح بالسلم.'],
+  ex:'من دورات كل مادة بعد تفريغها.',
+  why:'<b>ليش مهمة:</b> أقرب شي لجو الامتحان.'},
+ {id:'all-plan',eff:2,data:'ready',t:'العدّ التنازلي وخطة الأيام',
+  idea:'الطالب بيحط تاريخ امتحانه، والتطبيق بيوزّع الدروس على الأيام الباقية حسب نقاط ضعفه.',
+  how:['بيحط التاريخ.','بيطلعله برنامج يومي.','بيتعدّل لحاله حسب نتايجه.'],
+  ex:'«باقي ٤٢ يوم: اليوم درسين علوم ومراجعة فيزياء».',
+  why:'<b>ليش مهمة:</b> بند «خطة مراجعة قبل الامتحان».'},
+ {id:'all-challenge',eff:2,data:'ready',t:'تحدّي صاحبك',
+  idea:'الطالب بيبعت رابط تحدّي بعشر أسئلة لرفيقه عالواتساب، والاتنين بيشوفوا النتيجة.',
+  how:['بيختار المادة.','بيبعت الرابط.','رفيقه بيحل وبتطلع المقارنة.'],
+  ex:'«تحدّاك أحمد بعشر أسئلة علوم، جاب ٨ من ١٠. فيك تغلبه؟»',
+  why:'<b>ليش مهمة:</b> كل تحدّي ممكن يجيب طالب جديد، فالتطبيق بينتشر لحاله.'},
+ {id:'all-streak',eff:1,data:'ready',t:'سلسلة الأيام والإنجازات',
+  idea:'عدّاد أيام دراسة متتالية، وشارات لما يخلّص وحدة أو يحل عدد أسئلة.',
+  how:['بيدرس كل يوم.','العدّاد بيكبر.','بياخد شارات.'],
+  ex:'«١٢ يوم ورا بعض» بتطلع بالرئيسية.',
+  why:'<b>ليش مهمة:</b> عادة يومية بتخلي الطالب يرجع.'},
+ {id:'all-night',eff:1,data:'prep',t:'وضع ليلة الامتحان',
+  idea:'أهم الأسئلة المتكررة بكل مادة بجولة وحدة سريعة.',
+  how:['بيختار المادة.','بيمرق عالأهم.','بيعلّم اللي ما بيعرفه.'],
+  ex:'بتنبنى من الأسئلة المتكررة بالدورات.',
+  why:'<b>ليش مهمة:</b> بند «مراجعات ليلة الامتحان» بأكتر من مادة.'},
+ ]},
+];
+
+const TOP5 = [
+ ['math-steps','الحل خطوة بخطوة','ميزة وحدة بتشتغل بتلات مواد، والحلول مكتوبة خطوات أصلاً. أسرع شي ينبنى.'],
+ ['ar-poem','القصيدة المفرّغة والآية المفرّغة','محرّك واحد لمادتين، وهو نفس فكرة الرسمات بالضبط بس للنصوص.'],
+ ['all-scale','صحّح ورقتك بسلم الوزارة','العربي جاهز بـ ٢٢٢ سؤال بسلالمها، وبيكبر مع كل مادة بتتفرّغ دوراتها.'],
+ ['phy-spring','محاكي النواس المرن','الأكتر إبهاراً للإعلان بعد الرسمات، والقوانين موجودة بالحاسبات.'],
+ ['chem-nuclear','أكمل المعادلة النووية','صغيرة وسريعة، ومعادلات الوحدة الأولى كلها جاهزة.'],
+];
+
+/* ===== الحفظ ===== */
+const LS_KEY='bacFeatureDecisions.v1';
+let decisions = {};
+try{ decisions = JSON.parse(localStorage.getItem(LS_KEY)||'{}')||{}; }catch(e){ decisions={}; }
+let db=null, dbState='local';
+const pending={};
+function saveLocal(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(decisions)); }catch(e){} }
+function featById(id){ for(const s of SUBJECTS){ const f=s.features.find(x=>x.id===id); if(f) return [s,f]; } return [null,null]; }
+async function persist(id){
+  saveLocal();
+  if(!db) return;
+  const prev = pending[id] || Promise.resolve();
+  pending[id] = prev.then(async()=>{
+    const ref = db.collection('decisions').doc(id);
+    const d = decisions[id];
+    try{
+      if(!d || (!d.choice && !d.note)){ await ref.delete(); }
+      else{ const [s,f]=featById(id); await ref.set({choice:d.choice||'',note:d.note||'',title:f?f.t:id,subject:s?s.name:'',at:Date.now()}); }
+      setStatus('saved');
+    }catch(e){ setStatus('err'); }
+  });
+}
+function setStatus(k){
+  const t={local:'محفوظة بهالجهاز.',saved:'محفوظة، وبقدر إقراها من عندي.',err:'ما انحفظت عندي هالمرة، بس محفوظة بهالجهاز.',wait:'عم اتصل بالحفظ…'}[k];
+  document.querySelectorAll('.saved').forEach(el=>el.textContent=t);
+  dbState=k;
+}
+(async()=>{
+  try{
+    const c = window.claude;
+    if(c && typeof c.use==='function'){ db = await c.use('db'); }
+  }catch(e){ db=null; }
+  if(!db){ setStatus('local'); return; }
+  setStatus('wait');
+  const timer = setTimeout(()=>setStatus('local'),10000);
+  db.collection('decisions').onSnapshot(snap=>{
+    if(!snap.metadata.fromCache) clearTimeout(timer);
+    const next={};
+    snap.docs.forEach(d=>{ const v=d.data(); if(v&&(v.choice||v.note)) next[d.id]={choice:v.choice||null,note:v.note||''}; });
+    decisions=next; saveLocal(); refreshDecisionsUI();
+    if(!snap.metadata.fromCache) setStatus('saved');
+  },()=>{ clearTimeout(timer); db=null; setStatus('local'); });
+})();
+
+/* ===== العرض ===== */
+const CH = {yes:'نفّذها',later:'لاحقاً',no:'لا'};
+const AR = (n)=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+const allFeats = ()=>SUBJECTS.flatMap(s=>s.features.map(f=>[s,f]));
+
+function tally(){
+  const all=allFeats().length; let y=0,l=0,n=0;
+  for(const k in decisions){ const c=decisions[k]&&decisions[k].choice; if(c==='yes')y++; else if(c==='later')l++; else if(c==='no')n++; }
+  document.getElementById('tally').innerHTML =
+   `<span>${AR(all)} ${(all%100>=3&&all%100<=10)?"ميزات":"ميزة"}</span><span>${AR(SUBJECTS.filter(s=>s.id!=='shared'&&s.id!=='exam').length)} كتب + ميزات للامتحان ومشتركة</span>`;
+}
+
+function tabs(active){
+  const items=[['overview','نظرة عامة','#FF7802'],...SUBJECTS.map(s=>[s.id,s.short,s.color])];
+  document.getElementById('tabs').innerHTML = items.map(([id,n,c])=>`<a href="#${id}" style="--c:${c}" ${id===active?'aria-current="page"':''}><span class="dot"></span>${n}</a>`).join('');
+  const cur=document.querySelector('nav.tabs a[aria-current]'); if(cur) cur.scrollIntoView({inline:'center',block:'nearest'});
+}
+
+function badgeHTML(f){
+  let b='';
+  if(f.status==='done') b+=`<span class="badge done">موجودة</span>`;
+  if(f.star) b+=`<span class="badge star">أولوية</span>`;
+  b+=`<span class="badge ${EFF[f.eff][0]}">${EFF[f.eff][1]}</span>`;
+  b+=`<span class="badge ${DATA[f.data][0]}">${DATA[f.data][1]}</span>`;
+  return b;
+}
+
+function cardHTML(s,f){
+  const d=decisions[f.id]||{};
+  return `<article class="feat ${f.star?'star':''}" id="f-${f.id}">
+   <div class="feat-head"><h3>${f.t}</h3><div class="badges">${badgeHTML(f)}</div></div>
+   <div><div class="lbl">الفكرة</div><p class="idea">${f.idea}</p></div>
+   <div class="how"><div class="lbl">كيف بتشتغل</div><ol>${f.how.map(h=>`<li>${h}</li>`).join('')}</ol></div>
+   ${f.demo?`<div class="demo" data-demo="${f.demo}"></div>`:`<div class="ex"><div class="lbl">مثال من الكتاب</div><div class="mline">${f.ex}</div></div>`}
+   <p class="why">${f.why}</p>
+   <div class="decide">
+     <div class="dbtns" role="group" aria-label="قرارك بـ ${f.t}"><span class="q">قرارك:</span>
+       ${['yes','later','no'].map(c=>`<button class="dbtn ${c}" data-fid="${f.id}" data-ch="${c}" aria-pressed="${d.choice===c}">${CH[c]}</button>`).join('')}
+     </div>
+     <textarea class="note-in" id="note-${f.id}" data-fid="${f.id}" rows="1" placeholder="ملاحظة إذا بدك (مثلاً: بس للوحدة الأولى)">${(d.note||'').replace(/</g,'&lt;')}</textarea>
+     <span class="saved"></span>
+   </div>
+  </article>`;
+}
+
+function overviewHTML(){
+  const books=SUBJECTS.map(s=>{
+    const st=s.features.find(f=>f.star);
+    return `<a class="book" href="#${s.id}" style="--c:${s.color}"><b>${s.name}</b><span>${AR(s.features.length)} ميزات</span><span>الأولوية: ${st?st.t:'—'}</span></a>`;
+  }).join('');
+  return `<section class="panel">
+   <div class="rule" style="border-color:#0F766E;border-width:2px">
+     <h2 style="color:#0F766E">جديد: ميزات للامتحان الأخير</h2>
+     <p>٢١ ميزة هدفها علامة الامتحان مباشرة. مبنية على ٢٩٦ ملف دورات وسلالم من ٢٠١٨ لـ ٢٠٢٦، وعلى قراءة أوراق امتحان حزيران ٢٠٢٦ الرسمية للمواد الثمانية ورقة ورقة: وين العلامات، وشو نوع الأسئلة، وقديش الوقت.</p>
+     <p>الأستعجل منها تحضير الاختبار الترشيحي للطلاب الأحرار، لأن موعده حسب وكالة سانا ١٩ كانون الأول ٢٠٢٦.</p>
+     <p><a href="#exam" style="color:#0F766E">افتح ميزات الامتحان</a></p>
+   </div>
+   <div class="rule">
+     <h2>ليش الرسمات نجحت، وشو القاعدة</h2>
+     <ul>
+       <li>المحتوى من الكتاب نفسه، بلا ولا زيادة.</li>
+       <li>عرض ما بيصير عالورق: بيتخبّى وبيظهر، وفي وضع «تعلّم» ووضع «اختبر حالك».</li>
+       <li>تقدّم الطالب بينحفظ، فبيعرف وين صار.</li>
+     </ul>
+     <p>كل ميزة بهالتقرير ماشية على هالقاعدة. الأمثلة الحيّة جرّبها بإيدك متل ما رح يجرّبها الطالب.</p>
+   </div>
+   <div class="rule legend">
+     <h2>كيف تقرا البطاقة</h2>
+     <div class="row"><span class="badge e1">جهد صغير</span> البيانات موجودة وبدها شاشة وحدة.</div>
+     <div class="row"><span class="badge e2">جهد متوسط</span> تفاعل أو رسم أعقد، أو تجهيز بسيط.</div>
+     <div class="row"><span class="badge e3">جهد كبير</span> خط إنتاج متل الرسمات أو محاكاة كاملة.</div>
+     <div class="row"><span class="badge dready">البيانات جاهزة</span> موجودة بالكتاب الرقمي هلق.</div>
+     <div class="row"><span class="badge dprep">بدها تجهيز محتوى</span> لازم نستخرج أو نكتب من الكتاب ونراجع.</div>
+     <div class="row"><span class="badge dai">بدها المدرّس الذكي</span> التصحيح الكامل بالذكاء الاصطناعي.</div>
+   </div>
+   <h2 class="sec-title">الأولويات المقترحة <small>بالترتيب</small></h2>
+   <ol class="top5">${TOP5.map(([id,t,p])=>`<li><div><b><a href="#${featById(id)[0].id}" data-jump="${id}">${t}</a></b><p>${p}</p></div></li>`).join('')}</ol>
+   <h2 class="sec-title">الكتب <small>كل كتاب بلون ثيمه من ملف ميزاته</small></h2>
+   <div class="books">${books}</div>
+  </section>`;
+}
+
+function subjectHTML(s){
+  return `<section class="panel" style="--c:${s.color};--tint:${s.tint}">
+   <div class="bookhead">
+     <h2>${s.name}</h2>
+     <p class="exists"><b>الموجود هلق بالكتاب:</b> ${s.exists}</p>
+     <div class="chips">${s.features.map(f=>{const c=(decisions[f.id]||{}).choice;return `<a href="#${s.id}" data-jump="${f.id}" class="${c?'d-'+c:''}">${f.star?'★ ':''}${f.t}</a>`}).join('')}</div>
+   </div>
+   ${s.features.map(f=>cardHTML(s,f)).join('')}
+  </section>`;
+}
+
+function decisionsHTML(){
+  const groups={yes:[],later:[],no:[]}; const undecided=[];
+  allFeats().forEach(([s,f])=>{ const d=decisions[f.id]; if(d&&d.choice) groups[d.choice].push([s,f,d]); else undecided.push([s,f]); });
+  const li=(arr)=>arr.length?`<ul>${arr.map(([s,f,d])=>`<li>${s.name}: ${f.t}${d&&d.note?` <small>(${d.note.replace(/</g,'&lt;')})</small>`:''}</li>`).join('')}</ul>`:'<p class="status">لسا ما في شي هون.</p>';
+  return `<section class="panel" style="--c:#2E2925;--tint:#F2EEE9">
+   <div class="dgroup"><h3>نفّذها (${AR(groups.yes.length)})</h3>${li(groups.yes)}</div>
+   <div class="dgroup"><h3>لاحقاً (${AR(groups.later.length)})</h3>${li(groups.later)}</div>
+   <div class="dgroup"><h3>لا (${AR(groups.no.length)})</h3>${li(groups.no)}</div>
+   <div class="dgroup"><h3>لسا ما قررت (${AR(undecided.length)})</h3><p class="status">${undecided.slice(0,12).map(([s,f])=>f.t).join('، ')}${undecided.length>12?'، …':''}</p></div>
+   <div class="dgroup"><h3>ابعتلي قراراتك</h3>
+     <p class="status saved"></p>
+     <p class="status">إذا الحفظ عندي شغّال، بس قلّي «خلصت» وأنا بقرا قراراتك. وإذا لا، انسخ هالنص وابعتلي ياه.</p>
+     <textarea class="copybox" id="copybox" readonly></textarea>
+     <div class="btnrow"><button class="btn fill" id="copybtn" style="--c:#2E2925">انسخ قراراتي</button><span class="status" id="copymsg"></span></div>
+   </div>
+  </section>`;
+}
+
+function copyText(){
+  const lines=['قراراتي بميزات كتب البكلوريا:'];
+  for(const c of ['yes','later','no']){
+    const arr=allFeats().filter(([s,f])=>(decisions[f.id]||{}).choice===c);
+    if(arr.length){ lines.push(''); lines.push(CH[c]+':'); arr.forEach(([s,f])=>{ const n=(decisions[f.id]||{}).note; lines.push('- '+s.name+': '+f.t+(n?' ('+n+')':'')); }); }
+  }
+  return lines.join('\n');
+}
+
+let currentView='overview';
+function route(){
+  const h=(location.hash||'').replace('#','');
+  const ids=['overview','decisions',...SUBJECTS.map(s=>s.id)];
+  currentView = ids.includes(h)?h:'overview';
+  render(true);
+}
+function render(scrollTop){
+  tabs(currentView);
+  const v=document.getElementById('view');
+  if(currentView==='overview') v.innerHTML=overviewHTML();
+  else if(currentView==='decisions'){ v.innerHTML=decisionsHTML(); const cb=document.getElementById('copybox'); cb.value=copyText(); }
+  else { const s=SUBJECTS.find(x=>x.id===currentView); v.innerHTML=subjectHTML(s); mountDemos(v,s); }
+  tally(); setStatus(dbState);
+  if(scrollTop) window.scrollTo({top:0});
+}
+function refreshDecisionsUI(){
+  tally();
+  if(currentView==='decisions'){ render(false); return; }
+  document.querySelectorAll('.dbtn').forEach(b=>{ const d=decisions[b.dataset.fid]||{}; b.setAttribute('aria-pressed', String(d.choice===b.dataset.ch)); });
+  document.querySelectorAll('.chips a[data-jump]').forEach(a=>{ const c=(decisions[a.dataset.jump]||{}).choice; a.className=c?'d-'+c:''; });
+  document.querySelectorAll('.note-in').forEach(t=>{ if(document.activeElement!==t){ const d=decisions[t.dataset.fid]||{}; t.value=d.note||''; } });
+}
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('.dbtn');
+  if(b){
+    const id=b.dataset.fid, ch=b.dataset.ch;
+    const d=decisions[id]||{};
+    if(d.choice===ch){ d.choice=null; } else { d.choice=ch; }
+    decisions[id]=d; if(!d.choice && !d.note) delete decisions[id];
+    refreshDecisionsUI(); persist(id); return;
+  }
+  const j=e.target.closest('[data-jump]');
+  if(j){
+    e.preventDefault();
+    const fid=j.dataset.jump; const [s]=featById(fid);
+    if(currentView!==s.id){ location.hash=s.id; setTimeout(()=>{const el=document.getElementById('f-'+fid); if(el) el.scrollIntoView({behavior:'smooth',block:'start'});},150); }
+    else { const el=document.getElementById('f-'+fid); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); }
+    return;
+  }
+  if(e.target.id==='copybtn'){
+    const txt=copyText(); const msg=document.getElementById('copymsg');
+    const fallback=()=>{ const cb=document.getElementById('copybox'); cb.focus(); cb.select(); msg.textContent='النص محدد، انسخه من القائمة.'; };
+    try{ navigator.clipboard.writeText(txt).then(()=>{msg.textContent='انتسخ.';},fallback); }catch(err){ fallback(); }
+  }
+});
+document.addEventListener('change',e=>{
+  const t=e.target.closest('.note-in'); if(!t) return;
+  const id=t.dataset.fid; const d=decisions[id]||{}; d.note=t.value.trim();
+  decisions[id]=d; if(!d.choice && !d.note) delete decisions[id];
+  persist(id);
+});
+window.addEventListener('hashchange',route);
+
+/* ===== الأمثلة الحيّة ===== */
+function mountDemos(root,s){
+  root.querySelectorAll('[data-demo]').forEach(el=>{
+    const fn=DEMOS[el.dataset.demo]; if(fn){ el.innerHTML='<span class="live">مثال حيّ — جرّبه</span>'; const box=document.createElement('div'); box.style.display='grid'; box.style.gap='12px'; el.appendChild(box); fn(box,s); }
+  });
+}
+function shuffle(a,seed){ const r=a.slice(); let x=seed||Math.floor(Math.random()*1e9); for(let i=r.length-1;i>0;i--){ x=(x*1103515245+12345)%2147483648; const j=x%(i+1); [r[i],r[j]]=[r[j],r[i]]; } return r; }
+
+const DEMOS={
+ steps(box){
+  const steps=[
+   `${M('<i>u</i><sub><i>n</i>+1</sub> − <i>u</i><sub><i>n</i></sub> = '+FR('3(<i>n</i>+1)+1','(<i>n</i>+1)−2')+' − '+FR('3<i>n</i>+1','<i>n</i>−2')+' = '+FR('3<i>n</i>+4','<i>n</i>−1')+' − '+FR('3<i>n</i>+1','<i>n</i>−2'))}`,
+   `نوحّد: ${M('= '+FR('(3<i>n</i>+4)(<i>n</i>−2) − (3<i>n</i>+1)(<i>n</i>−1)','(<i>n</i>−1)(<i>n</i>−2)'))}`,
+   `البسط: ${M('(3<i>n</i><sup>2</sup>−2<i>n</i>−8) − (3<i>n</i><sup>2</sup>−2<i>n</i>−1) = −7')}. إذن ${M('<i>u</i><sub><i>n</i>+1</sub> − <i>u</i><sub><i>n</i></sub> = '+FR('−7','(<i>n</i>−1)(<i>n</i>−2)')+' &lt; 0')} لأجل ${M('<i>n</i> ≥ 3')}.`,
+   `الفرق سالب، إذن المتتالية متناقصة تماماً على مجال تعريفها ${M('(<i>n</i> ≥ 3)')}.`
+  ];
+  let shown=0; const self=[];
+  box.innerHTML=`<p class="qtext">من الكتاب: ادرس جهة اطّراد المتتالية ${M('<i>u</i><sub><i>n</i></sub> = '+FR('3<i>n</i>+1','<i>n</i>−2'))}.</p>
+   <ol class="steps"></ol>
+   <div class="btnrow"><button class="btn fill" data-a="next">اكشف الخطوة الجاية</button><button class="btn" data-a="reset">من جديد</button></div>
+   <div class="result" aria-live="polite">فكّر بالخطوة الأولى، بعدين اكشفها.</div>`;
+  const ol=box.querySelector('.steps'), res=box.querySelector('.result'), next=box.querySelector('[data-a=next]');
+  function draw(){
+    ol.innerHTML=steps.map((st,i)=>i<shown?`<li><div class="mline">${st}</div><div class="self"><button data-i="${i}" data-v="1" aria-pressed="${self[i]===1}">عرفتها لحالي</button><button data-i="${i}" data-v="0" aria-pressed="${self[i]===0}">ما عرفتها</button></div></li>`:`<li class="hiddenstep" aria-label="خطوة مخبّاية">.</li>`).join('');
+    next.disabled = shown>=steps.length;
+    if(shown>=steps.length){
+      const k=self.filter(v=>v===1).length, answered=self.filter(v=>v===0||v===1).length;
+      res.className='result'+(answered===steps.length?(k>=3?' good':''):'');
+      res.textContent = answered===steps.length ? `عرفت ${AR(k)} من ${AR(steps.length)} خطوات لحالك. هالرقم بينحفظ، وبيطلع بخريطة نقاط ضعفك.` : 'علّم على كل خطوة: عرفتها أو لا، لتطلع نتيجتك.';
+    } else res.textContent = shown===0?'فكّر بالخطوة الأولى، بعدين اكشفها.':`انكشف ${AR(shown)} من ${AR(steps.length)}. جرّب الخطوة الجاية براسك قبل ما تكشفها.`;
+  }
+  box.addEventListener('click',e=>{
+    const a=e.target.closest('[data-a]'); const s=e.target.closest('[data-i]');
+    if(a&&a.dataset.a==='next'&&shown<steps.length){ shown++; draw(); }
+    else if(a&&a.dataset.a==='reset'){ shown=0; self.length=0; draw(); }
+    else if(s){ self[+s.dataset.i]=+s.dataset.v; draw(); }
+  });
+  draw();
+ },
+
+ spring(box){
+  box.innerHTML=`<div class="sim">
+   <canvas aria-label="محاكاة نواس مرن: جسم مربوط بنابض بيهتز"></canvas></div>
+   <div class="ctrls">
+    <label for="sp-m">الكتلة: <span class="m" id="sp-mv">0.50</span> كغ<input id="sp-m" type="range" min="0.1" max="2" step="0.05" value="0.5"></label>
+    <label for="sp-k">ثابت الصلابة: <span class="m" id="sp-kv">50</span> نيوتن/م<input id="sp-k" type="range" min="10" max="200" step="5" value="50"></label>
+    <label for="sp-a">السعة: <span class="m" id="sp-av">6</span> سم<input id="sp-a" type="range" min="2" max="10" step="1" value="6"></label>
+   </div>
+   <div class="readout" id="sp-ro">الدور الخاص ${M('<i>T</i><sub>0</sub> = 2π√(<i>m</i>/<i>k</i>)')} = <b id="sp-t">0.63</b> ثانية</div>
+   <div class="result" id="sp-note" aria-live="polite">غيّر السعة وراقب الدور.</div>
+   <div class="btnrow"><button class="btn" id="sp-play">إيقاف</button></div>`;
+  const cv=box.querySelector('canvas'), ctx=cv.getContext('2d');
+  const im=box.querySelector('#sp-m'), ik=box.querySelector('#sp-k'), ia=box.querySelector('#sp-a');
+  const note=box.querySelector('#sp-note'), tEl=box.querySelector('#sp-t'), ro=box.querySelector('#sp-ro'), play=box.querySelector('#sp-play');
+  let m=.5,k=50,A=6,t=0,last=null,running=!window.matchMedia('(prefers-reduced-motion: reduce)').matches, lastT=null;
+  play.textContent=running?'إيقاف':'تشغيل';
+  const css=getComputedStyle(box);
+  const C=s=>getComputedStyle(document.documentElement).getPropertyValue(s).trim()||'#888';
+  const subj=getComputedStyle(box.closest('.panel')).getPropertyValue('--c').trim()||'#1D4ED8';
+  function size(){ const r=cv.getBoundingClientRect(); const dpr=window.devicePixelRatio||1; cv.width=Math.max(300,r.width)*dpr; cv.height=150*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); }
+  function T(){ return 2*Math.PI*Math.sqrt(m/k); }
+  function upd(src){
+    m=+im.value; k=+ik.value; const oldA=A; A=+ia.value;
+    box.querySelector('#sp-mv').textContent=m.toFixed(2); box.querySelector('#sp-kv').textContent=k; box.querySelector('#sp-av').textContent=A;
+    const tv=T().toFixed(2);
+    if(tv!==lastT){ tEl.textContent=tv; ro.classList.remove('flash'); void ro.offsetWidth; ro.classList.add('flash'); }
+    if(src==='a') note.textContent=`غيّرت السعة لـ ${AR(A)} سم، والدور بقي ${tv} ثانية. هاد بالضبط تعليل الكتاب: الدور الخاص ما بيتعلق بالسعة.`;
+    else if(src==='m') note.textContent=`الكتلة صارت ${m.toFixed(2)} كغ والدور صار ${tv} ثانية: الجسم الأتقل بيهتز أبطأ.`;
+    else if(src==='k') note.textContent=`الصلابة صارت ${k} نيوتن/م والدور صار ${tv} ثانية: النابض الأقسى بيهتز أسرع.`;
+    lastT=tv;
+  }
+  im.addEventListener('input',()=>upd('m')); ik.addEventListener('input',()=>upd('k')); ia.addEventListener('input',()=>upd('a'));
+  play.addEventListener('click',()=>{ running=!running; play.textContent=running?'إيقاف':'تشغيل'; if(running){last=null; requestAnimationFrame(loop);} });
+  function draw(){
+    const W=cv.width/(window.devicePixelRatio||1), H=150;
+    ctx.clearRect(0,0,W,H);
+    const ink=C('--ink'), line=C('--line'), muted=C('--muted');
+    const wall=24, cx=W/2+10, pxcm=Math.min(9,(W/2-70)/10);
+    // الأرضية والجدار
+    ctx.strokeStyle=line; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(wall,118); ctx.lineTo(W-10,118); ctx.stroke();
+    ctx.fillStyle=muted; ctx.fillRect(wall-8,30,8,88);
+    for(let y=34;y<118;y+=10){ ctx.beginPath(); ctx.moveTo(wall-8,y+8); ctx.lineTo(wall-16,y+16); ctx.strokeStyle=muted; ctx.stroke(); }
+    // موضع التوازن وحدود السعة
+    ctx.setLineDash([4,4]); ctx.strokeStyle=muted; ctx.beginPath(); ctx.moveTo(cx,24); ctx.lineTo(cx,124); ctx.stroke();
+    ctx.strokeStyle=line; [cx-A*pxcm,cx+A*pxcm].forEach(x=>{ctx.beginPath(); ctx.moveTo(x,40); ctx.lineTo(x,124); ctx.stroke();});
+    ctx.setLineDash([]);
+    const w0=Math.sqrt(k/m); const x=A*Math.cos(w0*t); const bx=cx+x*pxcm; const bw=44;
+    // النابض
+    const sx=wall, ex=bx-bw/2, coils=14, amp=10, yy=96;
+    ctx.strokeStyle=ink; ctx.lineWidth=1.6; ctx.beginPath(); ctx.moveTo(sx,yy); const seg=(ex-sx-16)/(coils*2);
+    ctx.lineTo(sx+8,yy);
+    for(let i=0;i<coils*2;i++){ ctx.lineTo(sx+8+seg*(i+.5), yy+(i%2?amp:-amp)); }
+    ctx.lineTo(ex-8,yy); ctx.lineTo(ex,yy); ctx.stroke();
+    // الجسم
+    ctx.fillStyle=subj; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(bx-bw/2,74,bw,44,6) : ctx.rect(bx-bw/2,74,bw,44); ctx.fill();
+    ctx.fillStyle='#fff'; ctx.font='600 14px Cairo, sans-serif'; ctx.textAlign='center'; ctx.fillText('m',bx,101);
+    ctx.fillStyle=muted; ctx.font='12px Cairo, sans-serif'; ctx.fillText('موضع التوازن',cx,18);
+  }
+  function loop(ts){
+    if(!box.isConnected) return;
+    if(last!=null) t+=(ts-last)/1000; last=ts; draw();
+    if(running) requestAnimationFrame(loop);
+  }
+  size(); upd(); draw(); if(running) requestAnimationFrame(loop);
+  window.addEventListener('resize',()=>{ if(box.isConnected){ size(); draw(); } });
+ },
+
+ nuclear(box){
+  const EQ=[
+   {lab:'تطبيق ١',L:[[14,6,'C']],R:[[14,7,'N']],ans:'b',type:'b',txt:'تتحوّل نواة الكربون إلى نواة النتروجين تلقائياً.'},
+   {lab:'تطبيق ٤',L:[[226,88,'Ra']],R:[[222,86,'Rn']],ans:'a',type:'a',txt:'تتحوّل نواة الراديوم إلى نواة الرادون بإطلاقها جسيماً.'},
+   {lab:'نشاط ٩',L:[[1,1,'H'],[200,80,'Hg']],R:[[197,79,'Au']],ans:'a',type:'s',txt:'عند قذف نواة الزئبق ببروتون تتحوّل إلى نواة الذهب.'},
+  ];
+  const P={a:[4,2,'He','ألفا'],b:[0,-1,'e','بيتا'],p:[0,1,'e','بوزيترون'],n:[1,0,'n','نيوترون']};
+  const TYPES={a:'تحوّل ألفا',b:'تحوّل بيتا',c:'تفاعل التقاط',s:'تفاعل تطافر'};
+  let cur=0, pick=null, tpick=null;
+  function nucs(arr){ return arr.map(([A,Z,S])=>NUC(A,Z,S)).join(' <span>+</span> '); }
+  function draw(){
+    const q=EQ[cur]; const sumL=q.L.reduce((a,x)=>[a[0]+x[0],a[1]+x[1]],[0,0]); const r=q.R[0];
+    const p=pick?P[pick]:null; const ok=pick===q.ans;
+    const zfmt=z=>String(z).replace('-','−');
+    box.innerHTML=`<div class="seg" role="group" aria-label="اختار المعادلة">${EQ.map((e,i)=>`<button data-eq="${i}" aria-pressed="${i===cur}">${e.lab}</button>`).join('')}</div>
+     <p class="qtext">${q.txt} أكمل المعادلة:</p>
+     <div class="eqline">${nucs(q.L)} <span>→</span> ${NUC(r[0],r[1],r[2])} <span>+</span> <span class="slot ${pick?(ok?'okk':'nok'):''}">${p?NUC(p[0],p[1],p[2]):'؟'}</span> <span style="font-size:.7em">+ طاقة</span></div>
+     <div class="opts">${Object.entries(P).map(([k,v])=>`<button class="opt ${pick===k?(ok?'okk':'nok'):''}" data-p="${k}">${NUC(v[0],v[1],v[2])} ${v[3]}</button>`).join('')}</div>
+     <div class="counters">
+      <div>العدد الكتلي: ${M(`${sumL[0]} → ${r[0]} + ${p?p[0]:'?'}`)} ${p?(sumL[0]===r[0]+p[0]?'<span style="color:var(--ok)">متوازن ✓</span>':'<span style="color:var(--bad)">مو متوازن</span>'):''}</div>
+      <div>العدد الذرّي: ${M(`${sumL[1]} → ${r[1]} + ${p?zfmt(p[1]):'?'}`)} ${p?(sumL[1]===r[1]+p[1]?'<span style="color:var(--ok)">متوازن ✓</span>':'<span style="color:var(--bad)">مو متوازن</span>'):''}</div>
+     </div>
+     ${ok?`<p class="qtext">شو نوع هالتحوّل؟</p><div class="opts">${Object.entries(TYPES).map(([k,v])=>`<button class="opt ${tpick===k?(k===q.type?'okk':'nok'):''}" data-t="${k}">${v}</button>`).join('')}</div>`:''}
+     <div class="result ${ok&&tpick===q.type?'good':(pick&&!ok?'badr':'')}" aria-live="polite">${!pick?'اختار الجسيم الناقص، وراقب العدّادين.':(!ok?'العدّادين ما تساووا. جرّب جسيم تاني.':(tpick==null?'صح! هلق حدد نوع التحوّل.':(tpick===q.type?'تمام. هيك بالضبط حل الكتاب.':'لا، فكّر: شو اللي انطلق أو انقذف؟')))}</div>`;
+  }
+  box.addEventListener('click',e=>{
+    const a=e.target.closest('[data-eq]'), p=e.target.closest('[data-p]'), t=e.target.closest('[data-t]');
+    if(a){cur=+a.dataset.eq; pick=null; tpick=null; draw();}
+    else if(p){pick=p.dataset.p; tpick=null; draw();}
+    else if(t){tpick=t.dataset.t; draw();}
+  });
+  draw();
+ },
+
+ order(box){
+  const target=['المستقبل الحسّي (الشمّي)','عصب وارد','مركز عصبي','عصب صادر','عضو مستجيب (الغدد اللعابية)'];
+  let pool, placed, mistakes;
+  function reset(){ pool=shuffle(target.map((x,i)=>i)); if(pool.every((v,i)=>v===i)) pool.reverse(); placed=[]; mistakes=0; draw(); }
+  function draw(){
+    const done=placed.length===target.length;
+    box.innerHTML=`<p class="qtext">من الكتاب (دراسة حالة): هشام جائع شمّ رائحة طعام فزاد إفراز لعابه. رتّب عناصر القوس الانعكاسية.</p>
+     <div class="built" aria-label="ترتيبك">${placed.length?placed.map((i,n)=>`${n?'<span class="arrow">←</span>':''}<span class="chipbtn placed">${target[i]}</span>`).join(''):'<span class="status">اكبس عالعناصر تحت بالترتيب الصح.</span>'}</div>
+     <div class="pool">${pool.filter(i=>!placed.includes(i)).map(i=>`<button class="chipbtn" data-o="${i}">${target[i]}</button>`).join('')}</div>
+     <div class="result ${done?(mistakes===0?'good':''):''}" aria-live="polite">${done?(mistakes===0?'ممتاز، رتّبتها بلا ولا غلطة.':`رتّبتها، بس بـ ${AR(mistakes)} ${mistakes===1?'غلطة':'غلطات'}. الغلط بيرجعلك بالمراجعة.`):(mistakes?`غلطات لهلق: ${AR(mistakes)}`:'ابدأ من أول عنصر بيستقبل التنبيه.')}</div>
+     <div class="btnrow"><button class="btn" data-r="1">من جديد</button></div>`;
+  }
+  box.addEventListener('click',e=>{
+    const o=e.target.closest('[data-o]'), r=e.target.closest('[data-r]');
+    if(r){ reset(); return; }
+    if(!o) return;
+    const i=+o.dataset.o;
+    if(i===placed.length){ placed.push(i); draw(); }
+    else { mistakes++; o.classList.remove('shake'); void o.offsetWidth; o.classList.add('shake'); o.style.borderColor='var(--bad)'; const res=box.querySelector('.result'); res.textContent=`لا، هاد مو مكانه. غلطات لهلق: ${AR(mistakes)}`; }
+  });
+  reset();
+ },
+
+ poem(box){ hideEngine(box,{
+   title:'من قصيدة «عرس المجد» لعمر أبو ريشة، كما بالكتاب:',
+   lines:[['دَرَجَ البَغْيُ عَلَيْها حِقْبَةً','وهَوَى دونَ بُلوغِ الأَرَبِ'],['وَارْتَمَى كِبْرُ اللَّيَالِي دُونَها','لَيَّنَ النَّابِ كَليلَ المِخْلَبِ'],['لا يَموتُ الحَقُّ مهما لَطَمَتْ','عَارِضَيهِ قَبْضَةُ المُغْتَصِبِ']],
+   quran:false}); },
+ verse(box){ hideEngine(box,{
+   title:'من سورة النحل (الآية ٢٠)، كما بالكتاب:',
+   lines:[['وَالَّذِينَ يَدْعُونَ مِن دُونِ اللَّهِ لَا يَخْلُقُونَ شَيْئًا وَهُمْ يُخْلَقُونَ']],
+   quran:true}); },
+
+ english(box){
+  const items=[
+   {s:"I'm siting",ok:false,fix:"I'm sitting",why:'خطأ إملائي بس: الفعل <bdi>sit</bdi> بتتضاعف فيه التاء.'},
+   {s:'John is swimming',ok:true,fix:'John is swimming',why:'صحيحة: <bdi>swim</bdi> فعل حركة، بيجي بالمستمر.'},
+   {s:"We're liking Egypt",ok:false,fix:'We like Egypt',why:'<bdi>like</bdi> فعل حالة، ما بيجي بالمستمر.'},
+   {s:"I'm knowning",ok:false,fix:'I know',why:'<bdi>know</bdi> فعل حالة، ومعها غلطة إملاء كمان.'},
+   {s:"I'm understanding",ok:false,fix:'I understand',why:'<bdi>understand</bdi> فعل حالة، ما بيجي بالمستمر.'},
+  ];
+  const ans=[];
+  function draw(){
+    const n=ans.filter((a,i)=>a!=null && a===items[i].ok).length, done=ans.filter(a=>a!=null).length===items.length;
+    box.innerHTML=`<p class="qtext">من تمرين الكتاب: إذا صيغة المستمر صحيحة علّم صح، وإذا غلط شوف التصحيح.</p>
+     <div class="items">${items.map((it,i)=>{const a=ans[i];const st=a==null?'':(a===it.ok?'okk':'nok');
+      return `<div class="item ${st}"><div class="sent">${it.s}</div>
+      ${a==null?`<div class="btnrow"><button class="btn" data-i="${i}" data-v="1">صح</button><button class="btn" data-i="${i}" data-v="0">غلط</button></div>`:
+      `<div class="fb">${a===it.ok?'إجابتك صح.':'إجابتك غلط.'} ${it.ok?'':`التصحيح: <bdi>${it.fix}</bdi>. `}${it.why}</div>`}</div>`}).join('')}</div>
+     <div class="result ${done&&n>=4?'good':''}" aria-live="polite">${done?`جبت ${AR(n)} من ${AR(items.length)}. الغلط بيرجعلك بالمراجعة.`:'جاوب على الجمل الخمسة.'}</div>
+     <div class="btnrow"><button class="btn" data-r="1">من جديد</button></div>`;
+  }
+  box.addEventListener('click',e=>{ const b=e.target.closest('[data-i]'), r=e.target.closest('[data-r]'); if(b){ ans[+b.dataset.i]=b.dataset.v==='1'; draw(); } else if(r){ ans.length=0; draw(); } });
+  draw();
+ },
+
+ french(box){
+  const Q=[
+   {q:'Notre office du tourisme publie un calendrier ………. vous puissiez participer à votre événement préféré.',ch:['pour','de peur que','pour que','afin de'],ai:2,
+    why:'الفاعلين مختلفين (<bdi>l\'office / vous</bdi>) والغاية إيجابية، فمنستعمل <bdi>pour que</bdi> مع الصيغة الشرطية الذاتية (<bdi>puissiez</bdi>). أما <bdi>pour</bdi> و <bdi>afin de</bdi> فبيجي بعدهن مصدر، و <bdi>de peur que</bdi> للغاية المنفية.'},
+   {q:'Je prends mon parapluie ………. il ne pleuve.',ch:["afin qu'","pour qu'","de crainte qu'","de façon à ce qu'"],ai:2,
+    why:'الغاية هون منفية (منتجنّب المطر)، فمنستعمل <bdi>de crainte qu\'</bdi> مع <bdi>ne</bdi> الزائدة (<bdi>ne pleuve</bdi>). الباقي للغاية الإيجابية.'},
+  ];
+  const ans=[];
+  function draw(){
+    box.innerHTML=`<p class="qtext">من تمارين القواعد بالكتاب: اختار الأداة المناسبة.</p>
+     <div class="items">${Q.map((x,i)=>{const a=ans[i];
+      return `<div class="item ${a==null?'':(a===x.ai?'okk':'nok')}"><div class="sent">${x.q}</div>
+       <div class="opts" style="justify-content:flex-start;direction:ltr">${x.ch.map((c,j)=>`<button class="opt ${a==null?'':(j===x.ai?'okk':(j===a?'nok':''))}" data-i="${i}" data-j="${j}" ${a!=null?'disabled':''}><bdi>${c}</bdi></button>`).join('')}</div>
+       ${a!=null?`<div class="fb">${a===x.ai?'صح.':'لا.'} ${x.why}</div>`:''}</div>`}).join('')}</div>
+     <div class="btnrow"><button class="btn" data-r="1">من جديد</button></div>`;
+  }
+  box.addEventListener('click',e=>{ const b=e.target.closest('[data-j]'), r=e.target.closest('[data-r]'); if(b){ ans[+b.dataset.i]=+b.dataset.j; draw(); } else if(r){ ans.length=0; draw(); } });
+  draw();
+ },
+};
+
+function hideEngine(box,cfg){
+  const words=[]; // [lineIdx, partIdx, text]
+  cfg.lines.forEach((parts,li)=>parts.forEach((p,pi)=>p.split(/\s+/).filter(Boolean).forEach(w=>words.push([li,pi,w]))));
+  let order=shuffle(words.map((_,i)=>i)), level=0, revealed=new Set();
+  const N=words.length;
+  function hiddenSet(){ const c=Math.round(N*level/4); return new Set(order.slice(0,c)); }
+  function draw(){
+    const hid=hiddenSet();
+    let idx=0;
+    const lineHTML=cfg.lines.map((parts)=>{
+      const ps=parts.map(p=>p.split(/\s+/).filter(Boolean).map(w=>{ const i=idx++; if(hid.has(i)&&!revealed.has(i)) return `<button class="blank" data-w="${i}" style="min-width:${Math.max(2,w.length*.55)}em" aria-label="كلمة مخفية، اكبس لتكشفها">${w}</button>`; return hid.has(i)?`<span class="rev">${w}</span>`:w; }).join(' '));
+      return cfg.quran?`<div class="quran">﴿${ps[0]}﴾</div>`:`<div class="bayt"><span>${ps[0]}</span><span>${ps[1]}</span></div>`;
+    }).join('');
+    const hc=hid.size, rc=[...revealed].filter(i=>hid.has(i)).length;
+    box.innerHTML=`<p class="qtext">${cfg.title}</p>
+     <div class="verse">${lineHTML}</div>
+     <div class="btnrow"><button class="btn" data-l="-1" ${level===0?'disabled':''}>أسهل</button><button class="btn fill" data-l="1" ${level===4?'disabled':''}>أصعب</button><button class="btn" data-l="0">رتّب الفراغات من جديد</button><span class="status">المستوى ${AR(level)} من ٤</span></div>
+     <div class="result ${level===4&&rc===0?'good':''}" aria-live="polite">${level===0?'اقرا النص كامل، بعدين اكبس «أصعب».':(hc===0?'':`مخفي ${hc===1?'كلمة وحدة':hc===2?'كلمتين':AR(hc)+(hc<=10?' كلمات':' كلمة')}، وكشفت منهم ${AR(rc)}. كل ما قلّ الكشف، كل ما ثبت الحفظ.`)}${level===4&&rc===0?' النص كله من حفظك!':''}</div>`;
+  }
+  box.addEventListener('click',e=>{
+    const b=e.target.closest('[data-w]'), l=e.target.closest('[data-l]');
+    if(b){ revealed.add(+b.dataset.w); draw(); }
+    else if(l){ const v=+l.dataset.l; if(v===0){ order=shuffle(order); } else level=Math.max(0,Math.min(4,level+v)); revealed=new Set(); draw(); }
+  });
+  draw();
+}
+
+route();
+</script>
+
+</body>
+</html>
